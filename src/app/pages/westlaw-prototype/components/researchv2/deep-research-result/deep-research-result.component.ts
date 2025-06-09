@@ -217,7 +217,7 @@ export class DeepResearchResultComponentv2 {
     }
     if(step === 4) {
       //preliminary answer and loader visible, 1 task completed, 1 question, 4 sources
-      this.nSources = 3;
+      this.nSources = 4;
       this.togglePlan = true;
       this.getPremilinaryAnswer();
       this.taskCurrent = 5;
@@ -225,7 +225,7 @@ export class DeepResearchResultComponentv2 {
     }
     if(step === 5) {
       //preliminary answer and loader visible, 2 tasks completed, 1 question, 6 sources
-      this.nSources = 3;
+      this.nSources = 4;
       this.taskCurrent = 8;
       this.nQuestions = 0;
       this.nNotes = 4;
@@ -233,7 +233,7 @@ export class DeepResearchResultComponentv2 {
 
     if(step === 6) {
       //preliminary answer and loader visible, at least 4 tasks completed, 1 question, 6 sources
-      this.nSources = 3;
+      this.nSources = 4;
       this.taskCurrent = 8;
       this.nQuestions = 0;
       this.nNotes = 4;
@@ -241,7 +241,7 @@ export class DeepResearchResultComponentv2 {
 
     if(step === 7) {
       //preliminary answer and loader visible, seems all visible tasks completed, 1 question, 8 sources
-      this.nSources = 3;
+      this.nSources = 4;
       this.taskCurrent = 8;
       this.nQuestions = 0;
       this.nNotes = 4;
@@ -286,7 +286,7 @@ export class DeepResearchResultComponentv2 {
    /**
    * Shows the popover and dynamically calculates its position after rendering.
    */
-  showPopover(event: MouseEvent) {
+  showPopover(event: MouseEvent, title?:string, subtitle?:string) {
     event.preventDefault();
     const target = event.target;
     const caseName = target ? (target as HTMLElement).innerText : 'no target';
@@ -298,7 +298,12 @@ export class DeepResearchResultComponentv2 {
       splitCaseName.pop();
     }
 
-    const newTitle = splitCaseName.join(',');
+    let newTitle = splitCaseName.join(',');
+
+    if(title && subtitle){
+      newTitle = title;
+      newTitleDetail = subtitle;
+    }
 
     this.cancelHide();
     this.currentTarget = event.currentTarget as HTMLElement; // Set the current target
