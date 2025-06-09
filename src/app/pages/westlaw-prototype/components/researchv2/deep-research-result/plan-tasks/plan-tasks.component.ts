@@ -18,7 +18,7 @@ export class PlanTasksComponentv2 {
     {
       "taskName": "Task 2",
       "taskStatus": "",
-      "taskDescription": "Investigating Exceptions to Economic Loss Rule in California.Research case law addressing 'same-protected-class' discrimination claims in New York."
+      "taskDescription": "Researching case law addressing 'same-protected-class' discrimination claims in New York."
     },
     {
       "taskName": "Task 3",
