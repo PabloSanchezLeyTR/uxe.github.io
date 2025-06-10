@@ -74,7 +74,7 @@
         {
             "id": 4,
             "title": " N.Y. Exec. Law § 300",
-            "subtitle": "",
+            "subtitle": " ",
             "snippets":[
                 {
                     "id":"a",
@@ -91,7 +91,7 @@
         {
             "id": 5,
             "title": "N.Y. Exec. Law § 296",
-            "subtitle": "",
+            "subtitle": " ",
             "snippets":[
                 {
                     "id":"a",
@@ -156,7 +156,7 @@
                 {
                     "id":"a",
                     "summary": "Failure to hire based on plaintiff’s gender did not show an inference of discrimination because a female was hired for the position.",
-                    "passage": "Moreover, to the extent that Plaintiff contends it was discriminatory not to hire her for the Rhode Island position, she cannot show that such decision was discriminatory on the basis of gender, since a female was hired "
+                    "passage": "Moreover, to the extent that Plaintiff contends it was discriminatory not to hire her for the Rhode Island position, she cannot show that such decision was discriminatory on the basis of gender, since a female was hired."
                 }
             ]
         },
@@ -167,8 +167,8 @@
             "snippets":[
                 {
                     "id":"a",
-                    "summary": "Failure to hire based on plaintiff’s gender did not show an inference of discrimination because a female was hired for the position.",
-                    "passage": "Moreover, to the extent that Plaintiff contends it was discriminatory not to hire her for the Rhode Island position, she cannot show that such decision was discriminatory on the basis of gender, since a female was hired "
+                    "summary": "Recognizing that it is “extremely difficult” to establish gender based animus when the plaintiff was male and the person was also male.",
+                    "passage": "It is “extremely difficult, if not practically impossible” to establish discrimination where, as here, plaintiff was passed over so an employer can hire another member of plaintiff's same protected class. See Fleming v. MaxMara USA, Inc., 644 F.Supp.2d 247, 261 (E.D.N.Y.2009). Plaintiff is male, Lacayo is male, and the candidate ultimately hired for the position, J.M., is male."
                 }
             ]
         },
@@ -176,73 +176,157 @@
             "id": 12,
             "title": "Szewczyk v. City of New York",
             "subtitle": "2016 WL 3920216 (2016) ",
-            "snippets":[]
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Plaintiff failed to establish discrimination where employer hired another woman for the position that Plaintiff sought.",
+                    "passage": "Plaintiff cannot establish that Defendants chose to hire a “less qualified employee not from plaintiff's protected class,” as they also hired another woman for the position that Plaintiff sought."
+                }
+            ]
         },
         {
             "id": 13,
             "title": "Beauchine v. City of Syracuse, New York",
             "subtitle": "2024 WL 2700874 (2024) ",
-            "snippets":[]
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Allowing discrimination claim to proceed despite the fact that for latest promotional cycle a female was hired for it. Additional evidence of discrimination over multiple promotional cycles created an inference of discrimination.",
+                    "passage": ""
+                }
+            ]
         },
         {
             "id": 14,
             "title": "Marks v. National Communications Ass'n, Inc.",
             "subtitle": "72 F. Supp. 2d 322 (1999) ",
-            "snippets":[]
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Recognizing that the fact that someone was hired from the same gender as the plaintiff does not itself defeat a legitimate inference of discrimination – especially in a “gender plus” case. ",
+                    "passage": "In fact, it is undisputed that NCA ultimately selected a woman, Selena Thomas, for the promotion. In a “gender plus” case, however, the fact that the NCA hired someone of the same gender as the plaintiff does not itself defeat an otherwise legitimate inference of discrimination. "
+                }
+            ]
         },
         {
             "id": 15,
             "title": "Phillips v. Chertoff",
             "subtitle": "87 Empl. Prac. Dec. P 42,380 (2005)",
-            "snippets":[]
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Recognizing that discrimination against one employee cannot be cured, or disproven, solely by favorable, or equitable, treatment of other employees of the same race or sex. ",
+                    "passage": "Our Court of Appeals appears to have disfavored this argument in Brown v. Henderson, which stated that 'discrimination against one employee cannot be cured, or disproven, solely by favorable, or equitable, treatment of other employees of the same race or sex.' "
+                }
+            ]
         },
         {
             "id": 16,
             "title": "Gordon-Mallett v. Mount Sinai Hospitals Group, Inc.",
-            "subtitle": "",
-            "snippets":[]
+            "subtitle": "2024 WL 1513910 (S.D.N.Y. Apr. 8, 2024)",
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Even if a person from the same protected class is hired, the decision could still be based on discriminatory motives if the employer's stated reasons for the hiring decision are proven to be a pretext. ",
+                    "passage": "Courts have held that an employer is less likely to have engaged in discrimination 'where the individual hired to replace a plaintiff alleging discrimination is within the same protected class.' Meyer v. State of N.Y. Off. of Mental Health, 174 F. Supp. 3d 673, 688 (E.D.N.Y. 2016), aff'd, 679 F. App'x 89 (2d Cir. 2017). But they have also emphasized that a replacement's characteristics are 'not dispositive.' Id."
+                }
+            ]
         },
         {
             "id": 17,
             "title": "Gautam v. Prudential Financial, Inc.",
-            "subtitle": "",
-            "snippets":[]
+            "subtitle": "2008 WL 11417411 (E.D.N.Y. Sept. 3, 2008)",
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Employers can often provide legitimate, non-discriminatory reasons for their hiring decisions, such as superior qualifications or better fit for the role. ",
+                    "passage": "Plaintiff's argument that he was more qualified than the persons actually hired is insufficient to establish pretext. To establish pretext, '[P]laintiff's credentials would have to be so superior to the credentials of the person selected for the job that no reasonable person, in the exercise of impartial judgment, could have chosen the candidate selected over the plaintiff for the job in question.' "
+                }
+            ]
         },
         {
             "id": 18,
             "title": "Johnson v. Dynamic Educational Systems, Inc. ",
-            "subtitle": "",
-            "snippets":[]
+            "subtitle": "2011 WL 2635444 (E.D.N.Y. July 5, 2011)",
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Employers can often provide legitimate, non-discriminatory reasons for their hiring decisions, such as superior qualifications or better fit for the role. ",
+                    "passage": "Second, there is the fact that the coordinator position was originally set to be offered to Koku and, after Koku decided to return to school, was ultimately awarded to Bektemba. Both of these men are, like Johnson, African–American, and this fact seriously undermines the discrimination claim."
+                }
+            ]
         },
         {
             "id": 19,
             "title": "Salters v. Hewitt-Young Electric, LLC ",
-            "subtitle": "",
-            "snippets":[]
+            "subtitle": "2017 WL 2403340 (W.D.N.Y. June 2, 2017)",
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "The burden remains on the plaintiff to provide substantial evidence of discrimination. Without concrete evidence beyond the hiring decision itself, claims are unlikely to succeed. ",
+                    "passage": "The Court agrees with defendant that plaintiff has failed to meet his burden of showing pretext and that, in the alternative, defendant is entitled to summary judgment on this basis. "
+                }
+            ]
         },
         {
             "id": 20,
             "title": "Arnold v. Independent Health Corp. ",
-            "subtitle": "",
-            "snippets":[]
+            "subtitle": "2021 WL 2715800 (W.D.N.Y. July 1, 2021) ",
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Claims of discrimination are difficult to establish when the replacement is from the same protected class. ",
+                    "passage": "Summary judgment is warranted for a second reason: the individuals IHA hired for the jobs at issue are all members of the same protected groups as Plaintiff—white and from the United States. An inference against discrimination is appropriate when the individual hired to replace the plaintiff alleging discrimination is within the same protected class as plaintiff. "
+                }
+            ]
         },
         {
             "id": 21,
             "title": "Bellis v. New York City Department of Education ",
-            "subtitle": "",
-            "snippets":[]
+            "subtitle": "2024 WL 1177232 (S.D.N.Y. Mar. 19, 2024) ",
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Claims of discrimination are difficult to establish when the replacement is from the same protected class. ",
+                    "passage": "And two of the three people who were hired instead of Bellis (Hoff and Dalla Betta) were themselves white. See, e.g., White v. Pacifica Found., 973 F. Supp. 2d 363, 381 (S.D.N.Y. 2013) ('The fact that Plaintiff was replaced by a member of the same protected class further undermines any inference of discriminatory intent.'); Johnson v. N.Y.C. Health & Hospitals Corp., No. 21-CV-25 (BMC), 2022 WL 2239439, at *6 (E.D.N.Y. June 22, 2022) ('It is ‘extremely difficult, if not practically impossible’ to establish discrimination where a plaintiff was passed over so an employer can hire another member of the plaintiff's same protected class.'). "
+                }
+            ]
         },
         {
             "id": 22,
             "title": "Harriram v. City Univ. of New York",
-            "subtitle": "No. 22-CV-9712 (RA), 2024 WL 1374804, at *7 (S.D.N.Y. Mar. 31, 2024)",
-            "snippets":[]
+            "subtitle": "2024 WL 1374804 (S.D.N.Y. Mar. 31, 2024)",
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Retaliation has its own causation test and may survive when the underlying discrimination count falters.",
+                    "passage": "Harriram has stated a NYSHRL retaliation claim under a failure-to-hire theory as '[t]he same standards govern retaliation claims' under both Title VII and the NYSHRL. Farmer, 473 F. Supp. 3d at 330 (S.D.N.Y. 2020). And, because Harriram has stated a claim under Title VII and the NYSHRL, she has a fortiori stated a claim under the NYCHRL. Id. at 334 (noting that NYCHRL's retaliation standard 'is similar to—but in part more permissive than—its federal and state analogues') "
+                }
+            ]
         },
         {
             "id": 23,
             "title": "Diaz v. Am. Tel. & Tel.",
             "subtitle": "752 F.2d 1356 (9th Cir. 1985)",
-            "snippets":[]
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "A plaintiff is not precluded from bringing suite merely because a person from the same protected class was selected for the position. ",
+                    "passage": "We need not now decide whether identity of class membership may ever be relevant to a determination whether a plaintiff has established a prima facie case under the McDonnell Douglas test. Rather, we need say only that, contrary to the district court's assumption, such identity does not automatically preclude a plaintiff from meeting the test. "
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "title": "Barrella v. Vill. of Freeport",
+            "subtitle": "43 F. Supp. 3d 136 (2014)  ",
+            "snippets":[
+                {
+                    "id":"a",
+                    "summary": "Submitting to the jury the issue of whether the race of the employee hired was Hispanic or Caucasian.",
+                    "passage": "Put simply, having repeatedly urged the Court to treat the issue of whether hispanic is a race for purposes of the anti-discrimination laws as a question of fact, the Defendants cannot now be heard to complain when the jury implicitly found against the Defendants on that factual question."
+                }
+            ]
         }
     ]
 }
