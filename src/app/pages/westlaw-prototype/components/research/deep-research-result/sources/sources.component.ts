@@ -18,7 +18,7 @@ export class SourcesComponent {
     this.currentSource = this.fullReport ? this.sources.sources : this.sources.sources.slice(0, 4);
   }
 
-  sourceClicked(event: MouseEvent, title:string, subtitle?:string): void {
-    this.onClicked.emit([event, title, subtitle]);
+  sourceClicked(event: MouseEvent, sourceId:number, snippetId?:string): void {
+    this.onClicked.emit([event, sourceId, snippetId]);
 }
 }

@@ -13,8 +13,8 @@ export class SourcesComponentv2 {
   @Output() onClicked: EventEmitter<any> = new EventEmitter();
   sources = sourcesData;
 
-  sourceClicked(event: MouseEvent, title:string, subtitle?:string): void {
-    this.onClicked.emit([event, title, subtitle]);
+  sourceClicked(event: MouseEvent, sourceId:number, snippetId?:string): void {
+    this.onClicked.emit([event, sourceId, snippetId]);
   }
 
 

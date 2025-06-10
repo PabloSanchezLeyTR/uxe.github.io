@@ -49,7 +49,7 @@
           <div class="snippets-area" *ngIf="source.snippets.length > 0">
             <span>Snippets: </span>
             <span class="snippet" *ngFor="let snippet of source.snippets">
-              <a href="#" class="link" (click)="sourceClicked($event,source.title,source.subtitle)" >[{{source.id}}.{{snippet.id}}]</a>
+              <a href="#" class="link" (click)="sourceClicked($event,source.id,snippet.id)" >[{{source.id}}.{{snippet.id}}]</a>
             </span>
           </div>
 
