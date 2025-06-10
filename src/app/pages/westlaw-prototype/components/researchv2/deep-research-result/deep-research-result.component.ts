@@ -1,5 +1,6 @@
 import { Component, ElementRef, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { PlanTasksComponentv2 } from './plan-tasks/plan-tasks.component';
+import * as sourcesData from './sources/sources.component.json';
 
 @Component({
   selector: 'app-deep-research-result',
@@ -92,8 +93,10 @@ export class DeepResearchResultComponentv2 {
   togglePlan: boolean = false;
   selectedTabIndex: number = 0;
 
+  sources = sourcesData;
+
   // --- State Properties ---
-  data: {title: string, details: string} | null = null;
+  data: {title: string, details: string, summary?:string, snippet?:string} | null = null;
   isVisible: boolean = false;
   top: number = 0;
   left: number = 0;
@@ -308,6 +311,51 @@ export class DeepResearchResultComponentv2 {
     this.cancelHide();
     this.currentTarget = event.currentTarget as HTMLElement; // Set the current target
     this.data = { title: newTitle, details: newTitleDetail };
+    this.isVisible = true;
+    this.switchTab('outcome');
+
+    // Wait for the next tick for Angular to render the popover in the DOM.
+    setTimeout(() => {
+      // Only proceed if the popover is still visible and we have a reference to it
+      if (!this.isVisible || !this.popoverRef || !this.currentTarget) {
+        return;
+      }
+
+      const hostRect = this.currentTarget.getBoundingClientRect();
+
+      const popoverElement = this.popoverRef.nativeElement;
+      const popoverRect = popoverElement.getBoundingClientRect();
+      const popoverWidth = popoverRect.width;
+      const popoverHeight = popoverRect.height;
+
+      let topPos = hostRect.top - popoverHeight - 10;
+      let leftPos = hostRect.left + (hostRect.width / 2) - (popoverWidth / 2);
+
+      // Adjust if it goes off-screen
+      if (topPos < 0) { topPos = hostRect.bottom + 10; }
+      if (leftPos < 0) { leftPos = 10; }
+      if (leftPos + popoverWidth > window.innerWidth) { leftPos = window.innerWidth - popoverWidth - 10; }
+
+      this.top = topPos + window.scrollY;
+      this.left = leftPos + window.scrollX;
+    }, 0);
+  }
+
+  /**
+   * Shows the popover and dynamically calculates its position after rendering.
+   */
+  showPopoverv2(event: MouseEvent, sourceId:number , snippetId:any) {
+    event.preventDefault();
+    const source = this.sources.sources.filter(x => x.id === sourceId)[0];
+    const title = source.title;
+    const subtitle = source.subtitle;
+    const sourceSnippet = source.snippets.filter(x => x.id === snippetId)[0];
+    const summary = sourceSnippet.summary;
+    const snippet = sourceSnippet.passage;
+
+    this.cancelHide();
+    this.currentTarget = event.currentTarget as HTMLElement; // Set the current target
+    this.data = { title: title, details: subtitle, summary: summary, snippet: snippet };
     this.isVisible = true;
     this.switchTab('outcome');
 

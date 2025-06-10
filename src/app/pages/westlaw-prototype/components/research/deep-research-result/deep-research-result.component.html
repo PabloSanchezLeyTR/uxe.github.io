@@ -82,7 +82,7 @@
           <li><a href="#" fragment="cases" (click)="onGoTo('item5',$event)">Recent developments in New York Law </a></li>
           <li><a href="#" fragment="jurisdiction" (click)="onGoTo('item6',$event)">Practical implications </a></li>
           <li><a href="#" fragment="jurisdiction" (click)="onGoTo('item7',$event)">Governing law characterizations </a></li>
-          <li><a href="#" fragement="unusual" (click)="onGoTo('item8',$event)">Arguments</a></li>
+          <li><a href="#" fragement="unusual" (click)="onGoTo('item8',$event)">Arguments and rebuttals</a></li>
           <li><a href="#" fragment="related" (click)="onGoTo('item9',$event)">Case outcomes</a></li>
           <li><a href="#" fragment="related" (click)="onGoTo('item10',$event)">Jurisdictional differences</a></li>
           <li><a href="#" fragment="related" (click)="onGoTo('item11',$event)">Unusual situations</a></li>
@@ -214,7 +214,7 @@
 
                   <div *ngIf="preliminaryAnswer">
 
-                    <p>Under New York law, a plaintiff can maintain a failure to hire discrimination claim even when the employer hires someone of the same race or gender as the plaintiff. While hiring someone from the same protected class as the plaintiff is evidence that weighs against an inference of discrimination, it is not an absolute defense.<a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[1]</a> Additionally, even if an employer hire someone of the same race or gender as the plaintiff, a discrimination claim may still proceed based on other protected characteristics.<a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[2]</a><a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[3]</a> Recent amendments to the New York State Human Rights Law (NYSHRL) require liberal construction to accomplish its anti-discriminatory purposes, making it more employee-friendly than federal law.<a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[4]</a> </p>
+                    <p>Under New York law, a plaintiff can maintain a failure to hire discrimination claim even when the employer hires someone of the same race or gender as the plaintiff. While hiring someone from the same protected class as the plaintiff is evidence that weighs against an inference of discrimination, it is not an absolute defense.<a href="#" class="link" (click)="showPopoverv2($event,1,'a')">[1-a]</a> Additionally, even if an employer hire someone of the same race or gender as the plaintiff, a discrimination claim may still proceed based on other protected characteristics.<a href="#" class="link" (click)="showPopoverv2($event,2,'a')">[2-a]</a><a href="#" class="link" (click)="showPopoverv2($event,3,'a')">[3-a]</a> Recent amendments to the New York State Human Rights Law (NYSHRL) require liberal construction to accomplish its anti-discriminatory purposes, making it more employee-friendly than federal law.<a href="#" class="link" (click)="showPopoverv2($event,4,'a')">[4-a]</a> </p>
 
                     <!-- <ol class="prelim">
                       <li>The California Supreme Court in <a href='#'>Robinson Helicopter Co., Inc. v. Dana Corp.</a>held that the economic loss rule does not bar claims for intentional misrepresentation or fraud in the performance of a contract when the fraud is independent of the breach of contract (<a href="#">Robinson Helicopter Co., Inc. v. Dana Corp., 34 Cal.4th 979 (2004)</a>).</li>
@@ -237,45 +237,45 @@
                 <div class="chunk" *ngIf="fullReport">
                   <div class="final-summary">
                     <h3 class="chunk-title" id="summary">Summary</h3>
-                    <p>Under New York law, a plaintiff can maintain a failure to hire discrimination claim even when the employer hires someone of the same race or gender as the plaintiff. While hiring someone from the same protected class as the plaintiff is evidence that weighs against an inference of discrimination, it is not an absolute defense <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[1]</a>. Additionally, even if an employer hires someone of the same race or gender as the plaintiff, a discrimination claim may still proceed based on other protected characteristics <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[2]</a> <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[3]</a>. Recent amendments to the New York State Human Rights Law (NYSHRL) require liberal construction to accomplish its anti-discriminatory purposes, making it more employee-friendly than federal law <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[4]</a>. </p>
+                    <p>Under New York law, a plaintiff can maintain a failure to hire discrimination claim even when the employer hires someone of the same race or gender as the plaintiff. While hiring someone from the same protected class as the plaintiff is evidence that weighs against an inference of discrimination, it is not an absolute defense <a href="#" class="link" (click)="showPopoverv2($event,1,'a')" >[1-a]</a>. Additionally, even if an employer hires someone of the same race or gender as the plaintiff, a discrimination claim may still proceed based on other protected characteristics <a href="#" class="link" (click)="showPopoverv2($event,2,'a')">[2-a]</a> <a href="#" class="link" (click)="showPopoverv2($event,3,'a')">[3-a]</a>. Recent amendments to the New York State Human Rights Law (NYSHRL) require liberal construction to accomplish its anti-discriminatory purposes, making it more employee-friendly than federal law <a href="#" class="link" (click)="showPopoverv2($event,4,'a')">[4-a]</a>. </p>
                   </div>
-
+      
                   <div class="final-analysis">
                     <h3 class="chunk-title" id="item2">New York employment discrimination law framework </h3>
-                    <p>Employment discrimination claims in New York are primarily governed by the New York State Human Rights Law (NYSHRL), codified in <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Executive Law § 296.</a> NYSHRL prohibits discrimination in employment based on protected characteristics including race, color, national origin, sex, age, disability, sexual orientation, gender identity, and other protected classes, <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Executive Law § 296 [5].</a> </p>
+                    <p>Employment discrimination claims in New York are primarily governed by the New York State Human Rights Law (NYSHRL), codified in Executive Law § 296.<a href="#" class="link" (click)="showPopoverv2($event,5,'a')">[5-a]</a> NYSHRL prohibits discrimination in employment based on protected characteristics including race, color, national origin, sex, age, disability, sexual orientation, gender identity, and other protected classes, <a href="#" class="link" (click)="showPopoverv2($event,5,'a')">[5-a].</a> </p>
                     <p>To establish a prima facie case of discrimination under the NYSHRL, a plaintiff must demonstrate:</p>
                     <ol>
                       <li>Membership in a protected class</li>
                       <li>Qualification for the position</li>
                       <li>An adverse employment action (such as failure to hire)</li>
-                      <li>Circumstances giving rise to an inference of discrimination <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Blackman v. Metro. Transit Auth., 206 A.D.3d 602, 169 N.Y.S.3d 653 (2022)</a><a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[6]</a> </li>
+                      <li>Circumstances giving rise to an inference of discrimination <a href="#" class="link" (click)="showPopoverv2($event,2,'d')">[2-d]</a> </li>
                     </ol>
-                    <p>This framework generally mirrors the federal Title VII framework established in <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">McDonnell Douglas Corp v. Green</a> <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[7]</a>. Historically, New York courts have applied the same standards for NYSHRL claims as federal courts apply to Title VII claims <a href="#" >[8]</a>. However, recent amendments to the NYSHRL have made it more employee-friendly, requiring liberal construction to maximize deterrent effects of the law <a href="">[9]</a>. </p>
+                    <p>This framework generally mirrors the federal Title VII framework established in <a href="#">McDonnell Douglas Corp v. Green</a><a href="#" class="link" (click)="showPopoverv2($event,6,'a')">[6-a], </a> <a href="#" class="link" (click)="showPopoverv2($event,7,'a')">[7-a]</a>. Historically, New York courts have applied the same standards for NYSHRL claims as federal courts apply to Title VII claims <a href="#" class="link" (click)="showPopoverv2($event,6,'a')">[6-a]</a>, <a href="#" class="link" (click)="showPopoverv2($event,7,'a')">[7-a]</a>. However, recent amendments to the NYSHRL have made it more employee-friendly, requiring liberal construction to maximize deterrent effects of the law <a href="#" class="link" (click)="showPopoverv2($event,4,'a')">[4-a]</a>. </p>
                   </div>
-
+      
                   <div class="final-governing">
                     <h3 class="chunk-title" id="item3">Same protected class defense in failure to hire cases not an absolute defense</h3>
-                    <p>The central question is whether a plaintiff can maintain a failure to hire discrimination claim when the employer ultimately hires someone of the same protected class. Based on New York case law, the fact that an employer hired someone of the same protected class as the plaintiff is not an absolute defense to a discrimination claim <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[10]</a> <a href="3">[11]</a>. </p>
-                    <p>While not an absolute defense, courts do consider the hiring of someone from the same protected class as evidence weighing against an inference of discrimination <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[12]</a>. In <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Ruderman v. New York State Insurance Fund</a>, the court noted that the fact that NYSIF "ultimately selected candidates from a broad age range, including at least one candidate who was the same age as plaintiff" was a factor that "weigh[ed] against any inference of discrimination" <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[13]</a>. </p>
+                    <p>The central question is whether a plaintiff can maintain a failure to hire discrimination claim when the employer ultimately hires someone of the same protected class. Based on New York case law, the fact that an employer hired someone of the same protected class as the plaintiff is not an absolute defense to a discrimination claim <a href="#" class="link" (click)="showPopoverv2($event,1,'a')">[1-a]</a> ,<a href="#" class="link" (click)="showPopoverv2($event,2,'f')">[2-f]</a>. </p>
+                    <p>While not an absolute defense, courts do consider the hiring of someone from the same protected class as evidence weighing against an inference of discrimination <a href="#" class="link" (click)="showPopoverv2($event,2,'c')">[2-c]</a>. In <a href="#">Ruderman v. New York State Insurance Fund</a>, the court noted that the fact that NYSIF "ultimately selected candidates from a broad age range, including at least one candidate who was the same age as plaintiff" was a factor that "weigh[ed] against any inference of discrimination" <a href="#" class="link" (click)="showPopoverv2($event,1,'a')">[1-a]</a>. Similarly, in <a href="#">Ayers v. Bloomberg, L.P.</a>, the court dismissed a sex discrimination claim in part because "the position ultimately went to a female employee" <a href="#" class="link" (click)="showPopoverv2($event,3,'a')">[3-a]</a>. The court found that this fact, along with others, meant the plaintiff failed to allege circumstances giving rise to an inference of discrimination based on sex. <a href="#" class="link" (click)="showPopoverv2($event,3,'a')">[3-a]</a> </p>
                   </div>
-
+      
                   <div class="final-arguements">
                     <h3 class="chunk-title" id="item4">One factor among many</h3>
-                    <p>Courts consider the hiring of someone from the same protected class as one factor among many in determining whether discrimination occurred <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[18]</a>. As the court in <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Blackman</a> demonstrated, the focus is on whether the employer's stated reasons for the hiring decision were pretextual for discrimination, not simply on the protected characteristics of the person who was hired <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[19]</a>. </p>
-
-                    <p>Importantly, even if an employer hires someone of the same race or gender as the plaintiff, a discrimination claim may still proceed based on other protected characteristics <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[20]</a>. In <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Ayers v. Bloomberg, L.P.</a>, while the sex discrimination claim was dismissed where another woman was hired, the age discrimination claim was allowed to proceed <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[21]</a>.</p>
+                    <p>Courts consider the hiring of someone from the same protected class as one factor among many in determining whether discrimination occurred <a href="#" class="link" (click)="showPopoverv2($event,2,'f')">[2-f]</a>. As the court in <a href="#">Blackman</a> demonstrated, the focus is on whether the employer's stated reasons for the hiring decision were pretextual for discrimination, not simply on the protected characteristics of the person who was hired <a href="#" class="link" (click)="showPopoverv2($event,2,'g')">[2-g]</a>. </p>
+      
+                    <p>Importantly, even if an employer hires someone of the same race or gender as the plaintiff, a discrimination claim may still proceed based on other protected characteristics <a href="#" class="link" (click)="showPopoverv2($event,3,'a')">[3-a]</a>. In <a href="#" >Ayers v. Bloomberg, L.P.</a>, while the sex discrimination claim was dismissed where another woman was hired, the age discrimination claim was allowed to proceed <a href="#" class="link" (click)="showPopoverv2($event,3,'a')">[3-a]</a>.</p>
                   </div>
-
+      
                   <div class="final-cases">
                     <h3 class="chunk-title" id="item5">Recent developments in New York law</h3>
-                    <p>Recent amendments to the NYSHRL have made it more employee-friendly, similar to the New York City Human Rights Law (NYCHRL) <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[22]</a>.  The state law now requires liberal construction to accomplish its anti-discriminatory purposes, regardless of how similar federal statutes are interpreted <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[23]</a>. As stated in <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Executive Law § 300:</a> </p>
-                    <p class="qoute">"The provisions of this article shall be construed liberally for the accomplishment of the remedial purposes thereof, regardless of whether federal civil rights laws, including those laws with provisions worded comparably to the provisions of this article, have been so construed." <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[24]</a></p>
-                    <p>The amendments also specify that exceptions and exemptions to the NYSHRL must be narrowly construed <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[25]</a>. </p>
+                    <p>Recent amendments to the NYSHRL have made it more employee-friendly, similar to the New York City Human Rights Law (NYCHRL) <a href="#" class="link" (click)="showPopoverv2($event,4,'a')">[4-a]</a>.  The state law now requires liberal construction to accomplish its anti-discriminatory purposes, regardless of how similar federal statutes are interpreted <a href="#" class="link" (click)="showPopoverv2($event,4,'a')">[4-a]</a>. As stated in <a href="#" >Executive Law § 300:</a> </p>
+                    <p class="qoute">"The provisions of this article shall be construed liberally for the accomplishment of the remedial purposes thereof, regardless of whether federal civil rights laws, including those laws with provisions worded comparably to the provisions of this article, have been so construed." <a href="#" class="link" (click)="showPopoverv2($event,4,'a')">[4-a]</a></p>
+                    <p>The amendments also specify that exceptions and exemptions to the NYSHRL must be narrowly construed <a href="#" class="link" (click)="showPopoverv2($event,4,'f')">[4-f]</a>. </p>
                   </div>
-
+      
                   <div class="final-juris-diff">
                     <h3 class="chunk-title" id="item6">Practical implications</h3>
-                    <p>From a practical standpoint, while hiring someone of the same protected class as the plaintiff can be helpful evidence for an employer defending against a discrimination claim, it is not dispositive <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[26]</a> <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[27]</a>. </p>
+                    <p>From a practical standpoint, while hiring someone of the same protected class as the plaintiff can be helpful evidence for an employer defending against a discrimination claim, it is not dispositive <a href="#" class="link" (click)="showPopoverv2($event,1,'a')">[1-a]</a>, <a href="#" class="link" (click)="showPopoverv2($event,2,'h')">[2-h]</a>, <a href="#" class="link" (click)="showPopoverv2($event,8,'a')">[8-a]</a>. </p>
                     <p>Plaintiffs alleging discrimination despite the hiring of someone from the same protected class should focus on:</p>
                     <ol>
                       <li>Evidence of pretext in the employer's stated reasons for the hiring decision</li>
@@ -286,125 +286,169 @@
                     </ol>
                     <p>Employers, on the other hand, should not rely solely on the fact that they hired someone from the same protected class as the plaintiff. They should ensure that their hiring decisions are based on legitimate, non-discriminatory criteria and that they maintain thorough documentation of the hiring process. </p>
                   </div>
-
+      
                   <div class="final-situations">
                     <h3 class="chunk-title" id="item7">Governing law characterizations</h3>
                     <p><b>Members of a protected class are protected collectively - how you treat one is how you treat them all </b></p>
                     <ul>
-                      <li><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">McNamse v. Starbucks Coffee Co., 914 F.Supp.2d 408 (E.D.N.Y. 2012)</a> </li>
+                      <li><a href="#">Fleming v. MaxMara USA, Inc., 371 F. App'x 115 (2d Cir. 2010)</a> <a href="#" class="link" (click)="showPopoverv2($event,9,'a')">[9-a]</a> </li>
+                      <ul>
+                        <li>Fleming's discriminatory termination claim fails because she cannot show the fourth element of her prima facie case—that the circumstances surrounding her termination give rise to an inference of discrimination. See Collins, 305 F.3d at 118. While a plaintiff may usually satisfy this element by showing that she was replaced by someone not in her protected class, see Zimmermann v. Assocs. First Capital Corp., 251 F.3d 376, 381 (2d Cir.2001), Fleming was replaced by another black female, Lisa Derrick. Fleming argues that Derrick was hired to disguise defendants' discriminatory act, but Fleming fails to point to any admissible evidence to support this assertion. Further, while Fleming points to cases concluding that where a plaintiff is replaced with a member of her protected class after the filing of a discrimination charge might suggest a cover-up, see, e.g., Howard v. Roadway Express, Inc., 726 F.2d 1529, 1534–35 (11th Cir.1984); Lee v. Conecuh County Bd. of Educ., 634 F.2d 959, 964 (5th Cir.1981), here Derrick was hired at the same time that Fleming was fired, before Fleming took any legal action against defendants. </li>
+                      </ul>
+                      <li><a href="#" >McNamse v. Starbucks Coffee Co., 914 F.Supp.2d 408 (E.D.N.Y. 2012)</a> <a href="#" class="link" (click)="showPopoverv2($event,10,'a')">[10-a]</a> </li>
                       <ul>
                         <li>Moreover, to the extent that Plaintiff contends it was discriminatory not to hire her for the Rhode Island position, she cannot show that such decision was discriminatory on the basis of gender, since a female was hired. </li>
                       </ul>
-                      <li><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Rodriguez v. New York City Health and Hospitals Corp., 2015 WL 5229850 (E.D.N.Y. 2015) </a></li>
+                      <li><a href="#" >Rodriguez v. New York City Health and Hospitals Corp., 2015 WL 5229850 (E.D.N.Y. 2015)</a> <a href="#" class="link" (click)="showPopoverv2($event,11,'a')">[11-a]</a></li>
                       <ul>
-                        <li>It is "extremely difficult, if not practically impossible" to establish discrimination where, as here, plaintiff was passed over so an employer can hire another member of plaintiff's same protected class. See <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Fleming v. MaxMara USA, Inc., 644 F.Supp.2d 247, 261 (E.D.N.Y.2009)</a>. Plaintiff is male, Lacayo is male, and the candidate ultimately hired for the position, J.M., is male. Since all three parties are male, it is highly unlikely that gender-based animus motivated the decision not to hire plaintiff. </li>
+                        <li>It is "extremely difficult, if not practically impossible" to establish discrimination where, as here, plaintiff was passed over so an employer can hire another member of plaintiff's same protected class. See <a href="#" >Fleming v. MaxMara USA, Inc., 644 F.Supp.2d 247, 261 (E.D.N.Y.2009)</a>. Plaintiff is male, Lacayo is male, and the candidate ultimately hired for the position, J.M., is male. Since all three parties are male, it is highly unlikely that gender-based animus motivated the decision not to hire plaintiff. </li>
+                      </ul>
+                      <li><a href="#" >Szewczyk v. City of New York, 2016 WL 3920216 (2016)</a> <a href="#" class="link" (click)="showPopoverv2($event,12,'a')">[12-a]</a></li>
+                      <ul>
+                        <li>Plaintiff cannot establish that Defendants chose to hire a “less qualified employee not from plaintiff's protected class,” as they also hired another woman for the position that Plaintiff sought. Butts, 2007 WL 259937 at *9; see Fleming v. MaxMara USA, Inc., 371 Fed. Appx. 115, 117 (2d Cir. 2010) (finding no inference of discrimination where black female plaintiff alleged termination based on race discrimination but she was “replaced by another black female”); Rodriguez v. N.Y.C. Health & Hosps. Corp., No. 14-CV-4960, 2015 WL 5229850, at *5 (E.D.N.Y. Sept. 8, 2015) (“It is extremely difficult, if not practically impossible to establish discrimination where, as here, plaintiff was passed over so an employer can hire another member of plaintiff's same protected class.” (citation and internal quotation marks omitted)); Cabrera v. New York City, 436 F. Supp. 2d 635, 645 (S.D.N.Y. 2006) (finding no inference of discrimination where the plaintiff alleged discrimination for failure to promote but those promoted were members of plaintiff's protected class). </li>
                       </ul>
                     </ul>
                     <p><b>Members of a protected class are protected individually - you can discriminate against one member even if you don't discriminate against another </b></p>
                     <ul>
-                      <li><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Phillips v. Chertoff, 2005 WL 3466033 (S.D.N.Y. 2005) </a></li>
+                      <li><a href="#" >Marks v. National Communications Ass'n, Inc., 72 F. Supp. 2d 322 (1999) </a> <a href="#" class="link" (click)="showPopoverv2($event,14,'a')">[14-a]</a></li>
                       <ul>
-                        <li>As for her race and gender discrimination claims, Phillips admits that the two offers made in connection with the July 1999 opening went to African-American women. Defendant argues that this fact alone prevents Phillips from making out a prima facie case of discrimination. (Def.Mem.Supp.Summ. J. 16.) Our Court of Appeals appears to have disfavored this argument in <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Brown v. Henderson</a>, which stated that "discrimination against one employee cannot be cured, or disproven, solely by favorable, or equitable, treatment of other employees of the same race or sex." <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">257 F.3d 246, 252 (2d Cir.2001)</a>. In support of this proposition the Court of Appeals cited approvingly to the Seventh Circuit case of <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Carson v. Bethlehem Steel Corp., 82 F.3d 157, 158 (7th Cir. 1996)</a>, describing that court as "rejecting the argument that plaintiff's replacement by a worker of the same race precluded the establishment of a prima facie case of race discrimination. </li>
+                        <li>As in Phillips, in which 75 to 80 percent of those hired for the position at issue were women, see Phillips, 400 U.S. at 544, 91 S.Ct. 496, there is no serious question of any general bias at NCA against hiring women, see Fisher v. Vassar College, 70 F.3d 1420, 1433 (2d Cir.1995) (“Fisher I ”), reh'g, 114 F.3d 1332 (2d Cir.1997) (en banc) (“Fisher II ”), cert. denied, 522 U.S. 1075, 118 S.Ct. 851, 139 L.Ed.2d 752 (1998), reh'g denied, 523 U.S. 1041, 118 S.Ct. 1341, 140 L.Ed.2d 501 (1998). In fact, it is undisputed that NCA ultimately selected a woman, Selena Thomas, for the promotion. In a “gender plus” case, however, the fact that the NCA hired someone of the same gender as the plaintiff does not itself defeat an otherwise legitimate inference of discrimination. See Trezza v. The Hartford, Inc., No. 98 Civ. 2205, 1998 WL 912101, at *6 (S.D.N.Y. Dec.30, 1998).  </li>
+                      </ul>
+                      <li><a href="#" >Phillips v. Chertoff, 2005 WL 3466033 (S.D.N.Y. 2005)</a> <a href="#" class="link" (click)="showPopoverv2($event,15,'a')">[15-a]</a></li>
+                      <ul>
+                        <li>As for her race and gender discrimination claims, Phillips admits that the two offers made in connection with the July 1999 opening went to African-American women. Defendant argues that this fact alone prevents Phillips from making out a prima facie case of discrimination. (Def.Mem.Supp.Summ. J. 16.) Our Court of Appeals appears to have disfavored this argument in Brown v. Henderson, which stated that "discrimination against one employee cannot be cured, or disproven, solely by favorable, or equitable, treatment of other employees of the same race or sex." 257 F.3d 246, 252 (2d Cir.2001). In support of this proposition the Court of Appeals cited approvingly to the Seventh Circuit case of Carson v. Bethlehem Steel Corp., 82 F.3d 157, 158 (7th Cir. 1996), describing that court as "rejecting the argument that plaintiff's replacement by a worker of the same race precluded the establishment of a prima facie case of race discrimination. </li>
+                      </ul>
+                      <li><a href="#" >Beauchine v. City of Syracuse, New York, 2024 WL 2700874 (2024)</a> <a href="#" class="link" (click)="showPopoverv2($event,13,'a')">[13-a]</a></li>
+                      <ul>
+                        <li>There is case law in this Circuit supporting the proposition that “it is ‘extremely difficult, if not practically impossible’ to establish discrimination where ... [the] plaintiff was passed over so an employer can hire another member of plaintiff's same protected class.” Rodriguez v. N.Y.C. Health & Hosps. Corp., No. 14-cv-4960, 2015 WL 5229850, at *5, 2015 U.S. Dist. LEXIS 119040 (E.D.N.Y. Sept. 8, 2015) (quoting Fleming v. MaxMara USA, Inc., 644 F. Supp. 2d 247, 261 (E.D.N.Y. 2009)). While Defendants’ promotion of C.L. (female) during the third promotional cycle may weaken any inference of discrimination, this is not a case where there is no other evidence of discrimination. See Johnson v. N.Y.C. Dep't of Educ., 39 F. Supp. 3d 314, 323 (E.D.N.Y. 2014) (“Where no other evidence giving rise to an inference of discrimination has been presented, the fact that a plaintiff is replaced with an individual within his protected class undermines his attempt to establish a prima facie case of discrimination.” (internal quotation marks and alterations omitted)). Here, Plaintiff has adduced evidence that during the three other promotional cycles, Plaintiff was passed over and male police officers were promoted instead. </li>
+                      </ul>
+                      <li><a href="#" >Meyer v. State of New York Office of Mental Health, 174 F.Supp.3d 673 (2016)</a> <a href="#" class="link" (click)="showPopoverv2($event,8,'a')">[8-a]</a></li>
+                      <ul>
+                        <li>Moreover, while also not dispositive, there is an inference against discrimination where the individual hired to replace a plaintiff alleging discrimination is within the same protected class. See, e.g., Fleming v. MaxMara USA, Inc., 371 Fed.Appx. 115, 117 (2d Cir.2010) (summary order) (affirming summary judgment in favor of defendant and finding no inference of discrimination where black female plaintiff alleged termination based on race discrimination but she was “replaced by another black female”); Rodriguez v. N.Y.C. Health & Hosps. Corp., No. 14 Civ. 4960, 2015 WL 5229850, at *5, 2015 U.S. Dist. LEXIS 119040, at *14 (E.D.N.Y. Sept. 8, 2015) (“It is extremely difficult, if not practically impossible to establish discrimination where, as here, plaintiff was passed over so an employer can hire another member of plaintiff's same protected class.”) (quotation marks omitted); Cabrera v. NYC, 436 F.Supp.2d 635, 645 (S.D.N.Y.2006) (finding no inference of discrimination where plaintiff alleged discrimination in failure to promote her and those promoted to the positions in question were in plaintiff's protected class); Smith v. Planas, 975 F.Supp. 303, 308 (S.D.N.Y.1997) (same). Here, one of the two positions that Plaintiff applied for in June 2011 was filled by another woman, Dr. Zinaida Yel (Def. 56.1 ¶ 107), a fact that further undercuts Plaintiff's claim of gender-based discrimination.  </li>
                       </ul>
                     </ul>
                   </div>
-
+      
                   <div class="final-related-issues">
-                    <h3 class="chunk-title" id="item8">Arguments</h3>
+                    <h3 class="chunk-title" id="item8">Arguments and rebuttals</h3>
                     <p><b>Arguments against the viability of a discrimination claim: </b></p>
                     <ol>
                       <li>Inference against discrimination: </li>
                         <ul>
-                          <li>The hiring of someone within the same protected class creates a strong inference against discriminatory intent, as consistently seen in cases like <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Meyer v. State of New York Office of Mental Health, 174 F.Supp.3d 673 (E.D.N.Y. 2016)</a> and <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Rodriguez v. New York City Health and Hospitals Corp., 2015 WK 5229850 (2015).</a> </li>
+                          <li>The hiring of someone within the same protected class creates a strong inference against discriminatory intent, as consistently seen in cases like <a href="#" >Meyer v. State of New York Office of Mental Health, 174 F.Supp.3d 673 (E.D.N.Y. 2016)</a><a href="#" class="link" (click)="showPopoverv2($event,8,'a')">[8-a]</a> and <a href="#" >Rodriguez v. New York City Health and Hospitals Corp., 2015 WK 5229850 (2015)<a href="#" class="link" (click)="showPopoverv2($event,11,'a')">[11-a]</a>.</a> </li>
                         </ul>
                       <li>Legitimate non-discriminatory reasons: </li>
                         <ul>
-                          <li>Employers can often provide legitimate, non-discriminatory reasons for their hiring decisions, such as superior qualifications or better fit for the role, as demonstrated in <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Gautam v. Prudential Financial, Inc., 2008 WL 11417411 (E.D.N.Y. 2008)</a> and <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Johnson v. Dynamic Educational Systems, Inc.. 2011 WL 2635444 (E.D.N.Y. 2011).</a> </li>
+                          <li>Employers can often provide legitimate, non-discriminatory reasons for their hiring decisions, such as superior qualifications or better fit for the role, as demonstrated in <a href="#" >Gautam v. Prudential Financial, Inc.</a><a href="#" class="link" (click)="showPopoverv2($event,17,'a')">[17-a]</a> and <a href="#" >Johnson v. Dynamic Educational Systems, Inc..</a><a href="#" class="link" (click)="showPopoverv2($event,18,'a')">[18-a]</a> </li>
+                        </ul>
+                      <li>Burden of Proof: </li>
+                        <ul>
+                          <li>The burden remains on the plaintiff to provide substantial evidence of discrimination. Without concrete evidence beyond the hiring decision itself, claims are unlikely to succeed, as highlighted in <a href="#">Salters v. Hewitt-Young Electric, LLC</a> <a href="#" class="link" (click)="showPopoverv2($event,19,'a')">[19-a]</a> </li>
+                        </ul>
+                      <li>Judicial Precedent: </li>
+                        <ul>
+                          <li>Courts have frequently ruled that claims of discrimination are difficult to establish when the replacement is from the same protected class, as noted in multiple cases, including <a href="#">Arnold v. Independent Health Corp.</a> <a href="#" class="link" (click)="showPopoverv2($event,20,'a')">[20-a]</a> and <a href="#">Bellis v. New York City Department of Education</a> <a href="#" class="link" (click)="showPopoverv2($event,21,'a')">[21-a]</a> </li>
                         </ul>
                     </ol>
                     <p><b>Arguments supporting the viability of a discrimination claim:  </b></p>
                     <ol>
-                      <li>Members of a protected class aren't identical. One member can be treated in a discriminatory manner based on that class, even if others aren't, as shown in cases like <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Phillips v. Chertoff, 2005 WL 3466033 (S.D.N.Y. 2005)</a>.  </li>
+                      <li>Members of a protected class aren't identical. One member can be treated in a discriminatory manner based on that class, even if others aren't, as shown in cases like <a href="#">Phillips v. Chertoff, 2005 WL 3466033 (S.D.N.Y. 2005)</a><a href="#" class="link" (click)="showPopoverv2($event,15,'a')">[15-a]</a>.  </li>
                         <ul>
                           <li>For instance, an employee of a certain race with a strong accent is denied a certain promotion, while another employee of the same race - but without any accent - is granted that promotion. Although both employees fall into the same protected class, the employer's different treatment of the two could still have been due to race. </li>
                           <li>Similarly, the ADEA protects employees over the age of 40. But an employer could still deny a promotion to a 60-year-old based on age, even though they give the promotion to a 40-year-old. Although both fall in the same protected class, the employer's different treatment could still have been due to age. </li>
                           <li>Whether unlawful discrimination occurred in these or other situations therefore depends on the facts of each specific case. </li>
                         </ul>
+                      <li>Non-Dispositive Hiring Practices: </li>
+                        <ul>
+                          <li>Hiring someone from the same protected class should not automatically negate a discrimination claim. The fact of hiring within the same class does not preclude the existence of discriminatory intent if there is additional supporting evidence. <a href="#">Phillips v. Chertoff, 87 Empl. Prac. Dec. P 42,380 (2005)</a> <a href="#" class="link" (click)="showPopoverv2($event,15,'a')">[15-a]</a> </li>
+                        </ul>
+                        <li>Pretextual Reasoning: </li>
+                        <ul>
+                          <li>Even if a person from the same protected class is hired, the decision could still be based on discriminatory motives if the employer's stated reasons for the hiring decision are proven to be a pretext, as suggested by <a href="#">Gordon-Mallett v. Mount Sinai Hospitals Group, Inc.</a> <a href="#" class="link" (click)="showPopoverv2($event,16,'a')">[16-a]</a> </li>
+                        </ul>
+                        <li>Discriminatory Remarks or Patterns: </li>
+                        <ul>
+                          <li>Evidence of discriminatory remarks or a pattern of biased behavior by decision-makers, as noted in <a herf="#">Gordon-Mallett v. Mount Sinai Hospitals Group, Inc.</a> <a href="#" class="link" (click)="showPopoverv2($event,16,'a')">[16]</a>, could support an inference of discrimination regardless of the protected class status of the replacement. </li>
+                        </ul>
+                        <li>Other Circumstantial Evidence: </li>
+                        <ul>
+                          <li>Additional circumstantial evidence, such as differences in qualifications, inconsistent application of policies, or procedural irregularities, can suggest discriminatory intent, as indicated in <a href="#" >Beauchine v. City of Syracuse, New York</a> <a href="#" class="link" (click)="showPopoverv2($event,13,'a')">[13-a]</a>. </li>
+                        </ul>
                     </ol>
                   </div>
-
+      
                   <div class="final-related-issues">
                     <h3 class="chunk-title" id="item9">Case outcomes</h3>
                     <table>
                       <thead>
                         <tr>
-                          <th>Claim failed</th>
-                          <th>Claim survived</th>
+                          <th>Hiring someone of the same protected class precludes a discrimination claim </th>
+                          <th>Hiring someone of the same protected class does not preclude a discrimination claim </th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>
-                            <p><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Fleming v. MaxMara USA, Inc., 371 F. App'x 115 (2d Cir. 2010)</a></p>
+                            <p><a href="#">Fleming v. MaxMara USA, Inc., 371 F. App'x 115 (2d Cir. 2010)</a><a href="#" class="link" (click)="showPopoverv2($event,9,'a')">[9-a]</a></p>
                             <p>Fleming's discriminatory termination claim failed because there was no inference of discrimination after plaintiff was replaced with someone from their same race and gender</p>
                           </td>
                           <td>
-                            <p><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Beauchine v. City of Syracuse, New York, 2024 WL 2700874 (2024)</a></p>
+                            <p><a href="#">Beauchine v. City of Syracuse, New York, 2024 WL 2700874 (2024)</a><a href="#" class="link" (click)="showPopoverv2($event,13,'a')">[13-a]</a></p>
                             <p>Allowing discrimination claim to proceed despite the fact that for latest promotional cycle a female was hired for it. Additional evidence of discrimination over multiple promotional cycles created an inference of discrimination.</p>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <p><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">McNamee v. Starbucks Coffee Co., 914 F.Supp.2d 408 (2012)</a></p>
+                            <p><a href="#">McNamee v. Starbucks Coffee Co., 914 F.Supp.2d 408 (2012)</a><a href="#" class="link" (click)="showPopoverv2($event,10,'a')">[10-a]</a></p>
                             <p>Plaintiff failure to hire based on her gender did not show an inference of discrimination because a female was hired for the position.</p>
                           </td>
                           <td>
-                            <p><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Marks v. National Communications Ass'n, Inc., 72 F. Supp. 2d 322 (1999)</a></p>
+                            <p><a href="#">Marks v. National Communications Ass'n, Inc., 72 F. Supp. 2d 322 (1999)</a><a href="#" class="link" (click)="showPopoverv2($event,14,'a')">[14-a]</a></p>
                             <p>Recognizing that the fact that someone was hired from the same gender as the plaintiff does not itself defeat a legitimate inference of discrimination – especially in a “gender plus” case.</p>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <p><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Rodriguez v. New York City Health and Hospitals Corp., 2015 WL 5229850 (E.D.N.Y.,2015) </a></p>
+                            <p><a href="#">Rodriguez v. New York City Health and Hospitals Corp., 2015 WL 5229850 (E.D.N.Y.,2015) </a><a href="#" class="link" (click)="showPopoverv2($event,11,'a')">[11-a]</a></p>
                             <p>Recognizing that it is “extremely difficult” to establish gender based animus when the plaintiff was male and the person was also male.</p>
                           </td>
                           <td>
-                            <p><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Phillips v. Chertoff, 2005 WL 3466033 (S.D.N.Y.,2005)</a></p>
+                            <p><a href="#">Phillips v. Chertoff, 2005 WL 3466033 (S.D.N.Y.,2005)</a><a href="#" class="link" (click)="showPopoverv2($event,15,'a')">[15-a]</a></p>
                             <p>Recognizing that discrimination against one employee cannot be cured, or disproven, solely by favorable, or equitable, treatment of other employees of the same race or sex.</p>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <p><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Szewczyk v. City of New York, 2016 WL 3920216 (E.D.N.Y., 2016)</a></p>
+                            <p><a href="#">Szewczyk v. City of New York, 2016 WL 3920216 (E.D.N.Y., 2016)</a><a href="#" class="link" (click)="showPopoverv2($event,12,'a')">[12-a]</a></p>
                             <p>Plaintiff failed to establish discrimination where employer hired another woman for the position that Plaintiff sought.</p>
                           </td>
                           <td>
-                            <p><a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Meyer v. State of New York Office of Mental Health, 174 F.Supp.3d 673 (E.D.N.Y., 2016)</a></p>
+                            <p><a href="#">Meyer v. State of New York Office of Mental Health, 174 F.Supp.3d 673 (E.D.N.Y., 2016)</a><a href="#" class="link" (click)="showPopoverv2($event,8,'a')">[8-a]</a></p>
                             <p>Nothing that the inference against discrimination where the individual hired to replace a plaintiff alleging discrimination is within the same protected class is not dispositive.</p>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-
+      
                   <div class="final-related-issues">
                     <h3 class="chunk-title" id="item10">Jurisdictional differences</h3>
-                    <p>The 9th Circuit has held that the inference of discrimination is not dependent on an examination of who, if anyone, was promoted instead of the plaintiff. Because Title VII was designed to protect individuals in addition to groups, a plaintiff is not precluded from suing merely because a person from the same protected class was selected for the position. <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Diaz v. Am. Tel. & Tel., 752 F.2d 1356 (9th Cir. 1985)</a>.</p>
+                    <p>The 9th Circuit has held that the inference of discrimination is not dependent on an examination of who, if anyone, was promoted instead of the plaintiff. Because Title VII was designed to protect individuals in addition to groups, a plaintiff is not precluded from suing merely because a person from the same protected class was selected for the position. <a href="#" >Diaz v. Am. Tel. & Tel., 752 F.2d 1356 (9th Cir. 1985)</a> <a href="#" class="link" (click)="showPopoverv2($event,23,'a')">[23-a]</a>.</p>
                   </div>
-
+      
                   <div class="final-related-issues">
                     <h3 class="chunk-title" id="item11">Unusual situations</h3>
-                    <p>If a plaintiff is replaced with a member of their protected class after the filing of a discrimination charge, the facts might suggest pretext or a cover-up. <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Fleming v. MaxMara USA, Inc., 371 F. App'x 115 (2d Cir. 2010)</a> (discussing cases that held a cover-up may exist when the plaintiff is replaced with a member of her protected class after the filing of a discrimination charge).</p>
-                    <p>There could be a jury issue as to whether the person hired for the position is a member of the same protected class as the plaintiff or not. <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Barrella v. Vill. of Freeport, 43 F. Supp. 3d 136, 178 (E.D.N.Y. 2014)</a> (reviewing jury decision regarding the race of the person hired for the position in a failure to promote case).</p>
+                    <p>If a plaintiff is replaced with a member of their protected class after the filing of a discrimination charge, the facts might suggest pretext or a cover-up. <a href="#" >Fleming v. MaxMara USA, Inc., 371 F. App'x 115 (2d Cir. 2010)</a> <a href="#" class="link" (click)="showPopoverv2($event,9,'a')">[9-a]</a>(discussing cases that held a cover-up may exist when the plaintiff is replaced with a member of her protected class after the filing of a discrimination charge).</p>
+                    <p>There could be a jury issue as to whether the person hired for the position is a member of the same protected class as the plaintiff or not. <a href="#" >Barrella v. Vill. of Freeport, 43 F. Supp. 3d 136, 178 (E.D.N.Y. 2014)</a> <a href="#" class="link" (click)="showPopoverv2($event,24,'a')">[24-a]</a>(reviewing jury decision regarding the race of the person hired for the position in a failure to promote case).</p>
                   </div>
-
+      
                   <div class="final-related-issues">
                     <h3 class="chunk-title" id="item12">Related issues</h3>
                     <h4 class="related-issue-h4">Retailiation</h4>
-                    <p>Even if the plaintiff cannot prove discriminatory motive for the refusal to hire, she may still prevail by showing the employer refused to hire her because she previously complained about discrimination or engaged in other protected conduct. Retaliation has its own causation test and may survive when the underlying discrimination count falters. <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Harriram v. City Univ. of New York, No. 22-CV-9712 (RA), 2024 WL 1374804, at *7 (S.D.N.Y. Mar. 31, 2024)</a>.</p>
+                    <p>Even if the plaintiff cannot prove discriminatory motive for the refusal to hire, she may still prevail by showing the employer refused to hire her because she previously complained about discrimination or engaged in other protected conduct. Retaliation has its own causation test and may survive when the underlying discrimination count falters. <a href="#" >Harriram v. City Univ. of New York, No. 22-CV-9712 (RA), 2024 WL 1374804, at *7 (S.D.N.Y. Mar. 31, 2024)</a>. <a href="#" class="link" (click)="showPopoverv2($event,22,'a')">[22-a]</a></p>
                     <p><a href="">Learn more</a></p>
                     <h4 class="related-issue-h4">Same-class decision maker</h4>
-                    <p>When the decision-makers are also members of the plaintiff's protected class, this creates an additional inference against discrimination <a href="#" class="link" (click)="showPopover($event,'Blackman v Metropolitan Tr. Auth.','N.Y.A.D. 2 Dept • June 1, 2022 • 2022 WL 1760133')" (mouseleave)="hideWithDelay()">[27]</a>. In Meyer, the court noted that when the decision-maker is in the same protected class(es) as the plaintiff-employee, courts can draw inferences against discriminatory intent. This may further complicate a plaintiff's ability to establish discriminatory intent in same-protected-class hiring decisions. <a href="#" class="link" (click)="showPopover($event)" (mouseleave)="hideWithDelay()">Meyer v. State of New York Off. of Mental Health, 174 F. Supp. 3d 673, 688 (E.D.N.Y. 2016).</a></p>
+                    <p>When the decision-makers are also members of the plaintiff's protected class, this creates an additional inference against discrimination <a href="#" class="link" (click)="showPopoverv2($event,9,'a')">[4-1]</a>. In Meyer, the court noted that when the decision-maker is in the same protected class(es) as the plaintiff-employee, courts can draw inferences against discriminatory intent. This may further complicate a plaintiff's ability to establish discriminatory intent in same-protected-class hiring decisions. <a href="#" >Meyer v. State of New York Off. of Mental Health, 174 F. Supp. 3d 673, 688 (E.D.N.Y. 2016).</a> <a href="#" class="link" (click)="showPopoverv2($event,8,'a')">[8-a]</a></p>
                     <p><a href="">Learn more</a></p>
                   </div>
 
@@ -641,20 +685,24 @@ class="source-popover"
 
 <!-- Tab Content Panels -->
 <div class="tab-content-container">
-  <div [hidden]="activeTab !== 'summary'">
-    <p>Finding triable issues of fact regarding discrimination despite similarities in protected characteristics (gender) but differences in race.</p>
+  <div [hidden]="activeTab !== 'summary'" *ngIf="data as popoverData">
+    <p>{{ popoverData.summary }}</p>
+    <!-- <p>Manufacturer brought action against parts supplier for breach of contract, breach of warranty, and intentional and negligent misrepresentation after supplier changed manufacturing process, which resulted in increase failure rate. The Superior Court, after a jury trial, entered a judgement in favor of the manufacturer in the sum of $7,533,924, including $6 million in punitive damages. Supplier appealed. The Court of Appeal affirmed in part and reversed in part. The Supreme Court granted review, superseding the opinion of the Court of Appearl.</p> -->
   </div>
-  <div [hidden]="activeTab !== 'outcome'">
-    <div class="pop-controls">
+  <div [hidden]="activeTab !== 'outcome'" *ngIf="data as popoverData">
+    <!-- <div class="pop-controls">
       <saf-icon slot="end" icon-name="chevron-right" appearance="light" class="pop-right" presentation />
       <span>Snippet 1 of 2</span>
       <saf-icon slot="end" icon-name="chevron-left" appearance="light" class="pop-left" presentation />
 
-    </div>
+    </div> -->
     <div class="pop-center">
-      <p>every element of intentional discrimination, or, having offered legitimate, nondiscriminatory reasons for the challenged actions, the absence of a triable issue of fact as to whether the explanations were pretextual” (<a href="#">Reichman v. City of New York, 179 A.D.3d 1115, 1117, 117 N.Y.S.3d 280</a> [internal quotation marks omitted]; see <a href="#">Bilitch v. New York City Health & Hosps. Corp., 194 A.D.3d at 1001, 148 N.Y.S.3d 238).</a></p>
-      <p><mark>Here, the Supreme Court properly determined that there were triable issues of fact as to whether the defendants’ proffered explanations for not hiring or promoting the plaintiff to a certain position, and for, instead, promoting a white woman to that position, were a pretext for intentional racial discrimination</mark> (see <a href="#">Lefort v. Kingsbrook Jewish Med. Ctr., 203 A.D.3d 708, 164 N.Y.S.3d 183</a>; <a href="#">Reichman v. City of New York, 179 A.D.3d at 1117, 117 N.Y.S.3d 280</a>; see also <a href="#">Bilitch v. New York City Health & Hosps. Corp., 194 A.D.3d at 1001, 148 N.Y.S.3d 238</a>).
-      <p>Moreover, the defendants failed to demonstrate their prima facie entitlement to judgment as a matter of law dismissing the claims of employment discrimination based on race in violation of the NYCHRL. The defendants failed to establish, prima facie, “that there was no evidentiary route that could allow a jury to find that discrimination on the basis</p>
+      <p>{{ popoverData.snippet }}</p>
+      <!-- <p>In this case, we decide whether the economic loss rule, which in some circumstances bars a tort action in the absence of personal injury or physical damage to other property, applies to claims for intentional misrepresentation or fraud in the performance of a contract. <mark>Because plaintiff Robinson Helicopter Company, Inc.'s (Robinson) fraud and intentional misrepresentation claim, with respect to Dana Corporation's (Dana) provision of false certificates of conformance, is an independent action based in tort, we conclude that the economic loss rule does not bar tort recovery.</mark></p>
+      <p>Facts</p>
+      <p>The underlying facts are undisputed and largely immaterial to this question of law. We therefore adopt our statement of facts from that of the Court of Appeal.1</p>
+      <p>Robinson is a manufacturer of helicopters. Its R22 model is a two-seat helicopter used as a primary trainer for pilots. The R44 model is a heavier model used for a wide variety of purposes.</p>
+     -->
     </div>
   </div>
 </div>
