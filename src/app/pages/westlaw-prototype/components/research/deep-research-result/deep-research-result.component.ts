@@ -222,7 +222,7 @@ export class DeepResearchResultComponent {
 
     if(step === 8) {
       //no loader, full report, all visible tasks completed, 5 questions, 12 sources
-      this.nSources = 6;
+      this.nSources = 23;
       this.getFullReport();
       this.taskCurrent = 8;
       this.nQuestions =5;
