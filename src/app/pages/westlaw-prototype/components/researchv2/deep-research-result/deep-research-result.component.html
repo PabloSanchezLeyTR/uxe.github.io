@@ -494,7 +494,7 @@
 
           <saf-tab-panel data-rel="Sources">
             <saf-progress-ring *ngIf="!fullReport" role="progressbar" max="100" min="0" progressSize="large" indeterminate="true" id="research-report-tab-loader"></saf-progress-ring>
-            <app-sources-v2 [fullReport]="fullReport" *ngIf="nSources > 0"></app-sources-v2>
+            <app-sources-v2 (onClicked)="showPopover($event[0],$event[1], $event[2])" [fullReport]="fullReport" *ngIf="nSources > 0"></app-sources-v2>
           </saf-tab-panel>
 
           <saf-tab-panel data-rel="Clarifying Questions" *ngIf="fullReport">
