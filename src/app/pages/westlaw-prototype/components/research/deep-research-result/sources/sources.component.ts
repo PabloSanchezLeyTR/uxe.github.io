@@ -21,4 +21,23 @@ export class SourcesComponent {
   sourceClicked(event: MouseEvent, sourceId:number, snippetId?:string): void {
     this.onClicked.emit([event, sourceId, snippetId]);
 }
+
+  activeSnippetIndices: number[] = [];
+
+  constructor() {
+    // Initialize activeSnippetIndices for each source
+    this.activeSnippetIndices = this.sources.sources.map(() => 0);
+  }
+
+  prevSnippet(sourceIndex: number): void {
+    if (this.activeSnippetIndices[sourceIndex] > 0) {
+      this.activeSnippetIndices[sourceIndex]--;
+    }
+  }
+
+  nextSnippet(sourceIndex: number): void {
+    if (this.activeSnippetIndices[sourceIndex] < this.sources.sources[sourceIndex].snippets.length - 1) {
+      this.activeSnippetIndices[sourceIndex]++;
+    }
+  }
 }
