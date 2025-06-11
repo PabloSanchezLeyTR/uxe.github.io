@@ -19,9 +19,9 @@
 
   <div class="sources-listing">
     <ol [class.inprogress]="!fullReport">
-      <!--<li class="source-item" [class.prelim]="!fullReport">
-        <a href="#" class="source-title">Blackman v Metropolitan Tr. Auth.  </a>
-        <span class="source-metadata">N.Y.A.D. 2 Dept  •  June 1, 2022  •  2022 WL 1760133 </span>
+      <!-- <li class="source-item" *ngFor="let source of sources.sources; let sourceIndex = index" [class.hide]="source.id >= 5 && !fullReport">
+        <a href="#" class="source-title">{{ source.title }}</a>
+        <span class="source-metadata">{{ source.subtitle }}</span>
         <div class="new-source-content">
           <p>Finding triable issues of fact regarding discrimination despite similarities in protected characteristics (gender) but differences in race. </p>
         </div>
@@ -41,7 +41,7 @@
           </div>
           <p>... Because plaintiff Robinson Helicopter Company, Inc.'s (Robinson) fraud and intentional misrepresentation claim, with respect to Dana Corporation's (Dana) provision of false certificates of conformance, is an independent action based in tort, we conclude that the economic loss rule does not bar tort recovery....</p>
         </div>
-      </li>-->
+      </li> -->
 
       <ol>
         <li class="source-item" *ngFor="let source of sources.sources; let sourceIndex = index" [class.hide]="source.id >= 5 && !fullReport">
@@ -49,15 +49,6 @@
           <span class="source-metadata">{{ source.subtitle }}</span>
           <div class="snippet-carousel">
             <div class="snippet-container" *ngFor="let snippet of source.snippets; let i = index" [class.active]="i === activeSnippetIndices[sourceIndex]">
-              <div class="source-content-2-controls">
-                <button (click)="prevSnippet(sourceIndex)" [disabled]="activeSnippetIndices[sourceIndex] === 0">
-                  <saf-icon slot="start" icon-name="chevron-left" appearance="light" presentation></saf-icon>
-                </button>
-                <span> [ {{source.id}}-{{snippet.id}} ] </span>
-                <button (click)="nextSnippet(sourceIndex)" [disabled]="activeSnippetIndices[sourceIndex] === source.snippets.length - 1">
-                  <saf-icon slot="start" icon-name="chevron-right" appearance="light" presentation></saf-icon>
-                </button>
-              </div>
               <div class="source-content">
                 <div class="source-content-header">
                   <span>AI Summary</span>
@@ -65,8 +56,17 @@
                 <p>{{ snippet.summary }}</p>
               </div>
               <div class="source-content-2">
+                <div class="source-content-2-controls">
+                  <button (click)="prevSnippet(sourceIndex)" [disabled]="activeSnippetIndices[sourceIndex] === 0">
+                    <saf-icon slot="start" icon-name="chevron-left" appearance="light" presentation></saf-icon>
+                  </button>
+                  <span>{{i+1}} out of {{source.snippets.length}}</span>
+                  <button (click)="nextSnippet(sourceIndex)" [disabled]="activeSnippetIndices[sourceIndex] === source.snippets.length - 1">
+                    <saf-icon slot="start" icon-name="chevron-right" appearance="light" presentation></saf-icon>
+                  </button>
+                </div>
                 <div class="source-content-2-header">
-                  <span>Snippet</span>
+                  <span>Snippet [ {{source.id}}-{{snippet.id}} ]</span>
                 </div>
                 <p>{{ snippet.passage }}</p>
               </div>
