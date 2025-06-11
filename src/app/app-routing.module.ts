@@ -19,88 +19,97 @@ import { DeepResearchResultComponentv2 } from './pages/westlaw-prototype/compone
 import { CaseDetailsComponentv2 } from './pages/westlaw-prototype/components/researchv2/case-details/case-details.component';
 import { QuickCheckComponentv2 } from './pages/westlaw-prototype/components/researchv2/quick-check/quick-check.component';
 
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './guards/auth.guard';
+
 const routes: Routes = [
-  { path: 'app-jaime-research', component: WijmoDemoComponent},
-  { path: 'research-history', component: ResearchHistoryComponent },
-  { path: 'my-research', component: MyResearchComponent},
-  { path: 'westlaw-prototype', component: HomeComponent, children: [
+  // Login route (accessible without authentication)
+  { path: 'login', component: LoginComponent },
+
+  // Protected routes
+  { path: 'app-jaime-research', canActivate: [AuthGuard], component: WijmoDemoComponent },
+  { path: 'research-history', canActivate: [AuthGuard], component: ResearchHistoryComponent },
+  { path: 'my-research', canActivate: [AuthGuard], component: MyResearchComponent },
+  { path: 'westlaw-prototype', canActivate: [AuthGuard], component: HomeComponent, children: [
     {
       path: 'new-research',
+      canActivate: [AuthGuard],
       component: NewResearchComponent
     },
     {
       path: 'new-research-v2',
-      component: NewResearchComponentv2
-    },
-    {
-      path: 'deep-research',
-      children: [
-        {
-          path: 'research-confirmation',
-          component: DeepResearchConfirmationComponent
-        },
-        {
-          path: 'research-results',
-          component: DeepResearchResultComponent
-        },
-        {
-          path: '',
-          redirectTo: 'research-confirmation',
-          pathMatch: 'full'
-        },
-        {
-          path: 'quick-check',
-          component: QuickCheckComponent
-        },
-      ]
+      canActivate: [AuthGuard],
+      component: NewResearchComponentv2,
     },
     {
       path: 'deep-research-v2',
+      canActivate: [AuthGuard],
       children: [
         {
           path: 'research-confirmation',
+          canActivate: [AuthGuard],
           component: DeepResearchConfirmationComponentv2
         },
         {
           path: 'research-results',
+          canActivate: [AuthGuard],
           component: DeepResearchResultComponentv2
         },
         {
-          path: '',
-          redirectTo: 'research-confirmation',
-          pathMatch: 'full'
-        },
-        {
           path: 'quick-check',
+          canActivate: [AuthGuard],
           component: QuickCheckComponentv2
         },
       ]
     },
     {
+      path: 'deep-research',
+      canActivate: [AuthGuard],
+      children: [
+        {
+          path: 'research-confirmation',
+          canActivate: [AuthGuard],
+          component: DeepResearchConfirmationComponent
+        },
+        {
+          path: 'research-results',
+          canActivate: [AuthGuard],
+          component: DeepResearchResultComponent
+        },
+        {
+          path: 'quick-check',
+          canActivate: [AuthGuard],
+          component: QuickCheckComponent
+        }
+      ]
+    },
+    {
       path: 'keyword-searchv2',
+      canActivate: [AuthGuard],
       component: KeywordSearchResultsComponentv2
     },
     {
       path: 'case-detailsv2',
+      canActivate: [AuthGuard],
       component: CaseDetailsComponentv2
     },
     {
       path: 'keyword-search',
+      canActivate: [AuthGuard],
       component: KeywordSearchResultsComponent
     },
     {
       path: 'case-details',
+      canActivate: [AuthGuard],
       component: CaseDetailsComponent
     },
-    {
-      path: '',
-      redirectTo: 'new-research',
-      pathMatch: 'full'
-    }
   ]},
-  {path: '404', component: WijmoDemoComponent},
-  { path: '**', component: WijmoDemoComponent },
-  { path: '', component: WijmoDemoComponent }
+
+  // Default route (redirect to login)
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+
+  // Wildcard route (redirect to login for undefined routes)
+  { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({

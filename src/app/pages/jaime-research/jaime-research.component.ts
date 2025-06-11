@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
+import { Router } from '@angular/router';
 import * as wjcCore from '@grapecity/wijmo';
 import { CollectionView, DataType } from '@grapecity/wijmo';
 import {
@@ -319,7 +320,7 @@ export class WijmoDemoComponent {
   page1: boolean = true;
   page2: boolean = false;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, private router: Router) {}
 
   // Toggles for demo
   isCompactDensity = false;
@@ -635,4 +636,12 @@ export class WijmoDemoComponent {
 
   // Utils
   Math = Math;
+
+  handleRoute(version?:string){
+    if(version === 'v2') {
+     this.router.navigate(['/westlaw-prototype/new-research-v2']);
+    }else{
+      this.router.navigate(['/westlaw-prototype/new-research']);
+    }
+  }
 }
