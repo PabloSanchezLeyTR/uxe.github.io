@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './case-details.component.html',
   styleUrls: ['./case-details.component.less']
 })
-export class CaseDetailsComponentv2 {
+export class CaseDetailsComponentv4 {
 
   constructor( private router: Router) { }
 

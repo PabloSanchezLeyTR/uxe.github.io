@@ -2,10 +2,10 @@ import { Component, Input } from '@angular/core';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
-  selector: 'app-notes-v2',
+  selector: 'app-notes-v4',
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.less']
 })
-export class NotesComponentv2 {
+export class NotesComponentv4 {
 
 }

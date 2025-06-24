@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './keyword-search-results.component.html',
   styleUrls: ['./keyword-search-results.component.less']
 })
-export class KeywordSearchResultsComponentv2 {
+export class KeywordSearchResultsComponentv4 {
 
   contentTypes: string[] = ['Cases', 'All', 'Articles', 'Blogs', 'News'];
   selectedContentType = 'Cases';

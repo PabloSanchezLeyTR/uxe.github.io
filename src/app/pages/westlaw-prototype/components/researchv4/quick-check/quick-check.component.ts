@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './quick-check.component.html',
   styleUrls: ['./quick-check.component.less']
 })
-export class QuickCheckComponentv2 {
+export class QuickCheckComponentv4 {
 
 }

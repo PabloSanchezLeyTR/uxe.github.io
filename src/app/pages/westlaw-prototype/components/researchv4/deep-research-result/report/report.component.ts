@@ -6,6 +6,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.less']
 })
-export class ReportComponentv2 {
+export class ReportComponentv4 {
 
 }

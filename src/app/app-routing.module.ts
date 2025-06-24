@@ -19,6 +19,20 @@ import { DeepResearchResultComponentv2 } from './pages/westlaw-prototype/compone
 import { CaseDetailsComponentv2 } from './pages/westlaw-prototype/components/researchv2/case-details/case-details.component';
 import { QuickCheckComponentv2 } from './pages/westlaw-prototype/components/researchv2/quick-check/quick-check.component';
 
+import { NewResearchComponentv3 } from './pages/westlaw-prototype/components/researchv3/new-research/new-research.component';
+import { DeepResearchConfirmationComponentv3 } from './pages/westlaw-prototype/components/researchv3/deep-research-confirmation/deep-research-confirmation.component';
+import { KeywordSearchResultsComponentv3 } from './pages/westlaw-prototype/components/researchv3/keyword-search-results/keyword-search-results.component';
+import { DeepResearchResultComponentv3 } from './pages/westlaw-prototype/components/researchv3/deep-research-result/deep-research-result.component';
+import { CaseDetailsComponentv3 } from './pages/westlaw-prototype/components/researchv3/case-details/case-details.component';
+import { QuickCheckComponentv3 } from './pages/westlaw-prototype/components/researchv3/quick-check/quick-check.component';
+
+import { NewResearchComponentv4 } from './pages/westlaw-prototype/components/researchv4/new-research/new-research.component';
+import { DeepResearchConfirmationComponentv4 } from './pages/westlaw-prototype/components/researchv4/deep-research-confirmation/deep-research-confirmation.component';
+import { KeywordSearchResultsComponentv4 } from './pages/westlaw-prototype/components/researchv4/keyword-search-results/keyword-search-results.component';
+import { DeepResearchResultComponentv4 } from './pages/westlaw-prototype/components/researchv4/deep-research-result/deep-research-result.component';
+import { CaseDetailsComponentv4 } from './pages/westlaw-prototype/components/researchv4/case-details/case-details.component';
+import { QuickCheckComponentv4 } from './pages/westlaw-prototype/components/researchv4/quick-check/quick-check.component';
+
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 
@@ -63,6 +77,58 @@ const routes: Routes = [
       ]
     },
     {
+      path: 'new-research-v3',
+      canActivate: [AuthGuard],
+      component: NewResearchComponentv3,
+    },
+    {
+      path: 'deep-research-v3',
+      canActivate: [AuthGuard],
+      children: [
+        {
+          path: 'research-confirmation',
+          canActivate: [AuthGuard],
+          component: DeepResearchConfirmationComponentv3
+        },
+        {
+          path: 'research-results',
+          canActivate: [AuthGuard],
+          component: DeepResearchResultComponentv3
+        },
+        {
+          path: 'quick-check',
+          canActivate: [AuthGuard],
+          component: QuickCheckComponentv3
+        },
+      ]
+    },
+    {
+      path: 'new-research-v4',
+      canActivate: [AuthGuard],
+      component: NewResearchComponentv4,
+    },
+    {
+      path: 'deep-research-v4',
+      canActivate: [AuthGuard],
+      children: [
+        {
+          path: 'research-confirmation',
+          canActivate: [AuthGuard],
+          component: DeepResearchConfirmationComponentv4
+        },
+        {
+          path: 'research-results',
+          canActivate: [AuthGuard],
+          component: DeepResearchResultComponentv4
+        },
+        {
+          path: 'quick-check',
+          canActivate: [AuthGuard],
+          component: QuickCheckComponentv4
+        },
+      ]
+    },
+    {
       path: 'deep-research',
       canActivate: [AuthGuard],
       children: [
@@ -102,6 +168,26 @@ const routes: Routes = [
       path: 'case-details',
       canActivate: [AuthGuard],
       component: CaseDetailsComponent
+    },
+    {
+      path: 'keyword-searchv3',
+      canActivate: [AuthGuard],
+      component: KeywordSearchResultsComponentv3
+    },
+    {
+      path: 'case-detailsv3',
+      canActivate: [AuthGuard],
+      component: CaseDetailsComponentv3
+    },
+    {
+      path: 'keyword-searchv4',
+      canActivate: [AuthGuard],
+      component: KeywordSearchResultsComponentv4
+    },
+    {
+      path: 'case-detailsv4',
+      canActivate: [AuthGuard],
+      component: CaseDetailsComponentv4
     },
   ]},
 
