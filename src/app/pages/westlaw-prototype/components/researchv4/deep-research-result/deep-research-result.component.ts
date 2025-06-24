@@ -388,10 +388,10 @@ export class DeepResearchResultComponentv4 {
 
   /** Hides the popover after a delay. */
   hideWithDelay() {
-    // this.hideTimeoutId = window.setTimeout(() => {
-    //   this.isVisible = false;
-    //   this.currentTarget = null; // Clear the target when hiding
-    // }, 500);
+    this.hideTimeoutId = window.setTimeout(() => {
+      this.isVisible = false;
+      this.currentTarget = null; // Clear the target when hiding
+    }, 500);
   }
 
   closePopover(){
