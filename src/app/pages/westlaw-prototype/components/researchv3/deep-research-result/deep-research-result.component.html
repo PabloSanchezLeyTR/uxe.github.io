@@ -670,7 +670,7 @@ class="source-popover"
 
 <!-- Title and Details -->
 <div class="popover-header" *ngIf="data as popoverData">
-  <h3 class="popover-title"><a href="#" target="_blank">{{ popoverData.title }} <saf-icon slot="start" icon-name="up-right-from-square" appearance="light" presentation></saf-icon></a></h3>
+  <h3 class="popover-title"><a [href]="popoverData.url" target="_blank">{{ popoverData.title }} <saf-icon slot="start" icon-name="up-right-from-square" appearance="light" presentation></saf-icon></a></h3>
   <p class="popover-details">{{ popoverData.details }}</p>
   <div class="popover-close"><button (click)="closePopover()"><saf-icon slot="end" icon-name="close" appearance="light" class="pop-left" presentation /></button></div>
 </div>
@@ -697,7 +697,7 @@ class="source-popover"
 
     </div> -->
     <div class="pop-center">
-      <p><a href="#" target="_blank">{{ popoverData.snippet }} <saf-icon slot="start" icon-name="up-right-from-square" appearance="light" presentation></saf-icon></a></p>
+      <p><a [href]="popoverData.snippetUrl" target="_blank">{{ popoverData.snippet }} <saf-icon slot="start" icon-name="up-right-from-square" appearance="light" presentation></saf-icon></a></p>
       <!-- <p>In this case, we decide whether the economic loss rule, which in some circumstances bars a tort action in the absence of personal injury or physical damage to other property, applies to claims for intentional misrepresentation or fraud in the performance of a contract. <mark>Because plaintiff Robinson Helicopter Company, Inc.'s (Robinson) fraud and intentional misrepresentation claim, with respect to Dana Corporation's (Dana) provision of false certificates of conformance, is an independent action based in tort, we conclude that the economic loss rule does not bar tort recovery.</mark></p>
       <p>Facts</p>
       <p>The underlying facts are undisputed and largely immaterial to this question of law. We therefore adopt our statement of facts from that of the Court of Appeal.1</p>

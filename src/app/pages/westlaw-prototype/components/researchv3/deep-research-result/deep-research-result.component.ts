@@ -96,7 +96,7 @@ export class DeepResearchResultComponentv3 {
   sources = sourcesData;
 
   // --- State Properties ---
-  data: {title: string, details: string, summary?:string, snippet?:string} | null = null;
+  data: {title: string, details: string, summary?:string, snippet?:string, url?:string, snippetUrl?:string} | null = null;
   isVisible: boolean = false;
   top: number = 0;
   left: number = 0;
@@ -360,13 +360,15 @@ export class DeepResearchResultComponentv3 {
     const source = this.sources.sources.filter(x => x.id === sourceId)[0];
     const title = source.title;
     const subtitle = source.subtitle;
+    const url = source.url;
     const sourceSnippet = source.snippets.filter(x => x.id === snippetId)[0];
     const summary = sourceSnippet.summary;
     const snippet = sourceSnippet.passage;
+    const snippetUrl = sourceSnippet.url;
 
     this.cancelHide();
     this.currentTarget = event.currentTarget as HTMLElement; // Set the current target
-    this.data = { title: title, details: subtitle, summary: summary, snippet: snippet };
+    this.data = { title: title, details: subtitle, summary: summary, snippet: snippet, url: url, snippetUrl: snippetUrl };
     this.isVisible = true;
     this.switchTab('outcome');
 
