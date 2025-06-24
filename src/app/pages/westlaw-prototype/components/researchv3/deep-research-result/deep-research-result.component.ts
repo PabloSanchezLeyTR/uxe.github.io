@@ -123,6 +123,17 @@ export class DeepResearchResultComponentv3 {
     if (externalElement) {
       this.renderer.addClass(externalElement, 'dom-flow');
     }
+    // Close popover when clicking outside
+    document.addEventListener('click', (event: MouseEvent) => {
+      if (this.isVisible && this.popoverRef) {
+        const popoverElement = this.popoverRef.nativeElement;
+        const target = event.target as HTMLElement;
+
+        if (!popoverElement.contains(target) && target !== this.currentTarget) {
+          this.closePopover();
+        }
+      }
+    });
   }
 
   ngOnDestroy(): void {
@@ -424,5 +435,5 @@ export class DeepResearchResultComponentv3 {
 
     return true;
   }
-
+  
 }
