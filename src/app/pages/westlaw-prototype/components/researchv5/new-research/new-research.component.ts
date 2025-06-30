@@ -10,4 +10,11 @@ import { BookmarksComponent } from '../../bookmarks/bookmarks.component';
 
 export class NewResearchComponentv5 {
 
+  searchType: string = 'Search'; // Default value
+
+  searchTypeChanged(event: any) {
+    console.log(event);
+    this.searchType = event;
+  }
+
 }

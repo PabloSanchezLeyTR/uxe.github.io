@@ -40,6 +40,8 @@ export class SearchBarComponentv2 {
 
   @ViewChildren('dialog') dialogRefs?: QueryList<ElementRef>;
 
+  @Output() searchTypeChange = new EventEmitter<string>();
+
   @Input() compactMode: boolean = false;
 
   boundCloseDialog: () => void;
@@ -145,6 +147,8 @@ export class SearchBarComponentv2 {
 
   toggleOptionSelected(option: ToggleOption) {
     this.selectedOption = option;
+    console.log(option);
+    this.searchTypeChange.emit(this.selectedOption.label);
     if (option.label === 'Search') {
       setTimeout(() => {
         if (this.showDeepResearchMenu) {

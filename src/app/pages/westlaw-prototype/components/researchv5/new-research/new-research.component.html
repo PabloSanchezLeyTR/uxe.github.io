@@ -3,7 +3,7 @@
         <span>Set as start page</span><saf-switch></saf-switch>
     </div>
     <div class="main-content">
-        <div class="header">
+        <div class="header" *ngIf="searchType != 'Search'">
             <div class="title">
                 Welcome to Westlaw Deep AI Research
             </div>
@@ -11,8 +11,16 @@
                 Dive further into your research topics with detailed, fully cited reports.
             </div>
         </div>
+        <div class="header" *ngIf="searchType === 'Search'">
+            <div class="title">
+                Welcome to Westlaw Search
+            </div>
+            <div class="subtitle">
+                Explore cases, statues, regulations, and other legal resources. Enter keywords or choose a search type to get started.
+            </div>
+        </div>
         <div class="content">
-            <app-search-bar-v2></app-search-bar-v2>
+            <app-search-bar-v2 (searchTypeChange)="searchTypeChanged($event)"></app-search-bar-v2>
         </div>
     </div>
     <div class="content">
