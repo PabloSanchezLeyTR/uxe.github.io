@@ -15,11 +15,11 @@ import { SEARCH_SUGGESTIONS } from '../../../data/search-suggestions';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-search-bar',
+  selector: 'app-search-bar-v2',
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.less'],
 })
-export class SearchBarComponent {
+export class SearchBarComponentv2 {
   @ViewChild('responseTimeMenu') responseTimeMenu!: ElementRef<HTMLDivElement>;
   @ViewChild('deepResearchMenu') deepResearchMenu!: ElementRef<HTMLDivElement>;
   @ViewChild('compactSearchBar') compactSearchBar!: ElementRef<HTMLDivElement>;
@@ -31,6 +31,7 @@ export class SearchBarComponent {
   isFileUploadedDone: boolean = false;
   fileUploadProgress: number = 0;
   fileUploadStepText: string = 'Uploading...';
+  deepSearch: number = 2;
 
   @ViewChild('dialog', { static: false }) attachmentDialog: any;
   @ViewChild('searchInput', { static: false }) searchInput:
@@ -108,12 +109,14 @@ export class SearchBarComponent {
       label: 'Search',
       textColor: 'blue',
       icon: 'magnifying-glass',
+      deepSearch: 0,
       includeDropdown: true,
       dropdownOnlyWhenActive: true,
     },
     {
       label: 'Deep AI Research',
       icon: 'telescope',
+      deepSearch: this.deepSearch,
       textColor: 'blue',
       includeDropdown: true,
       dropdownOnlyWhenActive: true,
@@ -339,5 +342,11 @@ export class SearchBarComponent {
   blurCompactModeSearchBar() {
     this.isCompactSearchBarFocused = false;
     this.compactSearchBarBlur.emit(null);
+  }
+
+  handleDeepSearchChange(deepSearch:number){
+    this.deepSearch = deepSearch;
+    console.log(this.deepSearch);
+    this.toggleOptions[1].deepSearch = deepSearch;
   }
 }

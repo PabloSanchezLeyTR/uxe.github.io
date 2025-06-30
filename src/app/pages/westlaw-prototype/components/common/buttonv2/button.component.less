@@ -2,7 +2,7 @@
 .base-button {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   cursor: pointer;
   background: none;
   border: none;
@@ -56,6 +56,10 @@
 
 .base-button i {
   font-size: 16px;
+}
+
+.dark-blue {
+  color:#054688;
 }
 
 .blue {
@@ -115,9 +119,20 @@
   vertical-align: middle;
 }
 
+.toggle-dropdown-button{
+  padding:5px;
+  background:none;
+  border:none;
 
-.base-button.btngrp{
-  width:30px;
-  padding:0px;
-  margin:0px;
+  .active{
+    background:red;
+    border: 1px solid blue;
+    border-radius: 5px;
+  }
+}
+
+.seperator{
+  margin: 0px 7px;
+  height: 26px;
+  border-right:1px solid grey;
 }

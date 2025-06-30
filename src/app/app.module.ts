@@ -21,9 +21,12 @@ import { WjInputModule } from '@grapecity/wijmo.angular2.input';
 import { HomeComponent } from './pages/westlaw-prototype/components/home/home.component';
 import { SidenavComponent } from './pages/westlaw-prototype/components/sidenav/sidenav.component';
 import { ButtonComponent } from './pages/westlaw-prototype/components/common/button/button.component';
+import { ButtonComponentv2 } from './pages/westlaw-prototype/components/common/buttonv2/button.component';
 import { SelectComponent } from './pages/westlaw-prototype/components/common/select/select.component';
 import { FooterComponent } from './pages/westlaw-prototype/components/footer/footer.component';
 import { NewResearchComponent } from './pages/westlaw-prototype/components/research/new-research/new-research.component';
+import { SearchBarComponentv2 } from './pages/westlaw-prototype/components/common/search-barv2/search-bar.component';
+import { ToggleComponentv2 } from './pages/westlaw-prototype/components/common/togglev2/toggle.component';
 import { SearchBarComponent } from './pages/westlaw-prototype/components/common/search-bar/search-bar.component';
 import { ToggleComponent } from './pages/westlaw-prototype/components/common/toggle/toggle.component';
 import { ResponseTimeMenuComponent } from './pages/westlaw-prototype/components/common/search-bar/response-time-menu/response-time-menu.component';
@@ -75,7 +78,21 @@ import { NotesComponentv4 } from './pages/westlaw-prototype/components/researchv
 import { QuickCheckComponentv4 } from './pages/westlaw-prototype/components/researchv4/quick-check/quick-check.component';
 import { NewResearchComponentv4 } from './pages/westlaw-prototype/components/researchv4/new-research/new-research.component';
 
+import { PlanTasksComponentv5 } from './pages/westlaw-prototype/components/researchv5/deep-research-result/plan-tasks/plan-tasks.component';
+import { KeywordSearchResultsComponentv5 } from './pages/westlaw-prototype/components/researchv5/keyword-search-results/keyword-search-results.component';
+import { DeepResearchConfirmationComponentv5 } from './pages/westlaw-prototype/components/researchv5/deep-research-confirmation/deep-research-confirmation.component';
+import { DeepResearchResultComponentv5 } from './pages/westlaw-prototype/components/researchv5/deep-research-result/deep-research-result.component';
+import { CaseDetailsComponentv5 } from './pages/westlaw-prototype/components/researchv5/case-details/case-details.component';
+import { LoadingStateBarsComponentv5 } from './pages/westlaw-prototype/components/researchv5/deep-research-result/loading-state-bars/loading-state-bars.component';
+import { ClarifyingQuestionsComponentv5 } from './pages/westlaw-prototype/components/researchv5/deep-research-result/clarifiying-questions/clarifiying-questions.component';
+import { SourcesComponentv5 } from './pages/westlaw-prototype/components/researchv5/deep-research-result/sources/sources.component';
+import { NotesComponentv5 } from './pages/westlaw-prototype/components/researchv5/deep-research-result/notes/notes.component'; // Verify this path exists or correct it
+import { QuickCheckComponentv5 } from './pages/westlaw-prototype/components/researchv5/quick-check/quick-check.component';
+import { NewResearchComponentv5 } from './pages/westlaw-prototype/components/researchv5/new-research/new-research.component';
+
 import { LoginComponent } from './login/login.component';
+import { ResponseTimeMenuComponentv2 } from './pages/westlaw-prototype/components/common/search-barv2/response-time-menu/response-time-menu.component';
+import { DeepResearchMenuComponentv2 } from './pages/westlaw-prototype/components/common/search-barv2/deep-research-menu/deep-research-menu.component';
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   declarations: [
@@ -86,15 +103,21 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     SidenavComponent,
     ButtonComponent,
+    ButtonComponentv2,
     SelectComponent,
     FooterComponent,
     NewResearchComponent,
     NewResearchComponentv2,
     NewResearchComponentv3,
     NewResearchComponentv4,
+    NewResearchComponentv5,
     SearchBarComponent,
     ToggleComponent,
+    SearchBarComponentv2,
+    ToggleComponentv2,
+    ToggleComponentv2,
     ResponseTimeMenuComponent,
+    ResponseTimeMenuComponentv2,
     KeywordSearchResultsComponent,
     DeepResearchConfirmationComponent,
     DeepResearchResultComponent,
@@ -107,6 +130,7 @@ import { LoginComponent } from './login/login.component';
     QuickCheckComponent,
     BookmarksComponent,
     DeepResearchMenuComponent,
+    DeepResearchMenuComponentv2,
     PlanTasksComponentv2,
     KeywordSearchResultsComponentv2,
     DeepResearchConfirmationComponentv2,
@@ -137,6 +161,16 @@ import { LoginComponent } from './login/login.component';
     SourcesComponentv4,
     NotesComponentv4,
     QuickCheckComponentv4,
+    PlanTasksComponentv5,
+    KeywordSearchResultsComponentv5,
+    DeepResearchConfirmationComponentv5,
+    DeepResearchResultComponentv5,
+    CaseDetailsComponentv5,
+    LoadingStateBarsComponentv5,
+    ClarifyingQuestionsComponentv5,
+    SourcesComponentv5,
+    NotesComponentv5,
+    QuickCheckComponentv5,
     LoginComponent,
   ],
   imports: [
