@@ -48,11 +48,43 @@
     </div>
     <div class="right-buttons">
       <div class="alt-button-group">
-        <app-button class="button-icon" [expanded]="false" [icon]="'reply-clock'" [color]="'blue'" (click)="clickTaskLibrary()"></app-button>
+         <!-- <saf-icon slot="end" icon-name="ellipsis-stroke-vertical" appearance="light" presentation [ngbPopover]="kebabMenu" placement="bottom"></saf-icon>
+            <ng-template #kebabMenu>
+              <div class="popover-wrapper">
+                <div class="download">
+                  <saf-icon slot="end" icon-name="download" appearance="light" presentation></saf-icon> <span>Download</span>
+                </div>
+                <div class="email">
+                  <saf-icon slot="end" icon-name="envelope" appearance="light" presentation></saf-icon> <span>Email</span>
+                </div>
+              </div>
+            </ng-template> -->
+        <app-button class="button-icon" id="anchor-history" [expanded]="false" [icon]="'reply-clock'" [color]="'blue'" [ngbPopover]="kebabMenu" placement="bottom" ></app-button>
+        <ng-template #kebabMenu id="history-pop">
+          <div class="popover-wrapper">
+            <div>
+              <p>Select a recent question to ask again or modify</p>
+              <ul>
+                <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam enim nisi, pellentesque sit amet molestie ac, porttitor nec turpis</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam enim nisi, pellentesque sit amet molestie ac, porttitor nec turpis</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam enim nisi, pellentesque sit amet molestie ac, porttitor nec turpis</a></li>
+              </ul>
+            </div>
+          </div>
+        </ng-template>
+        <saf-tooltip anchor="anchor-history" trigger-on-click="false">
+          History
+        </saf-tooltip>
         
-        <app-button class="button-icon" [expanded]="false" [icon]="'table-columns'" [color]="'blue'" (click)="clickHandler()"></app-button>
+        <app-button class="button-icon" id="anchor-task-lib" [expanded]="false" [icon]="'dashboard'" [color]="'blue'" (click)="clickTaskLibrary()"></app-button>
+        <saf-tooltip anchor="anchor-task-lib" trigger-on-click="false">
+          Task Library
+        </saf-tooltip>
 
-        <app-button class="button-icon" [expanded]="false" [icon]="'paperclip'" [color]="'blue'" (click)="clickHandler()"></app-button>
+        <app-button class="button-icon" id="anchor-paperclip" [expanded]="false" [icon]="'paperclip'" [color]="'blue'" (click)="clickHandler()"></app-button>
+        <saf-tooltip anchor="anchor-paperclip" trigger-on-click="false">
+          Attach
+        </saf-tooltip>
         <!-- <app-button [expanded]="false" [icon]="'at'" [color]="'blue'" (click)="openTagDialog()"></app-button> -->
         
       </div>
