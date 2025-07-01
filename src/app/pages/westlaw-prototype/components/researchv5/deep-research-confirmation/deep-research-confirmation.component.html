@@ -57,7 +57,7 @@
           </div> -->
           <div class="step-right">
             <div class="step-header">
-              <div class="step-title highlighted-step">How Deep?</div>
+              <!-- <div class="step-title highlighted-step">How Deep?</div>
               <div class="step-description">Choose longer times for more accurate and thorough reports.</div>
 
               <div class="select-card-row">
@@ -102,14 +102,14 @@
                     <ng-container *ngIf="longerTime === 'thirty'; then circleCheck else circleUncheck" />
               </div>
 
-              </div>
+              </div> -->
 
 
               <div class="step-title highlighted-step">Deep AI research tasks</div>
               <div class="step-description">Westlaw will use the following plan to guide the research report.</div>
             </div>
 
-            <div class="listing-wrapper">
+            <!-- <div class="listing-wrapper">
               <ol class="steps-listing">
                 <li>Identify the relevant New York anti-discrimination laws governing employment and hiring practices.</li>
                 <li>Research case law addressing "same-protected-class" discrimination claims in New York.</li>
@@ -119,14 +119,30 @@
                 <li>Analyze the legal reasoning behind allowing or disallowing such claims. </li>
                 <li>Identify the current legal standard for evaluating these claims in New York. </li>
               </ol>
-            </div>
+            </div> -->
+<textarea class="listing-wrapper listing-textarea" placeholder="Add any additional notes or context for the research task here...">
+1. Identify the relevant New York anti-discrimination laws governing employment and hiring practices.
 
-            <div>
+2. Research case law addressing "same-protected-class" discrimination claims in New York.
+
+3. Examine how New York courts have specifically handled failure-to-hire claims where the successful candidate shares the plaintiff's protected characteristic.
+
+4. Determine if there are any exceptions or special circumstances where such claims can proceed.
+
+5. Compare New York's approach to federal precedent on this issue.
+
+6. Analyze the legal reasoning behind allowing or disallowing such claims.
+
+7. Identify the current legal standard for evaluating these claims in New York.
+
+</textarea>
+
+            <!-- <div>
               <input type="checkbox" class="email-check"/> <span>Email me when the report is complete</span>
-            </div>
+            </div> -->
 
             <div class="actions">
-              <button routerLink="/westlaw-prototype/deep-research-v3/research-results" class="primary">
+              <button routerLink="/westlaw-prototype/deep-research-v5/research-results" class="primary">
                 Start research
               </button>
               <button routerLink="/westlaw-prototype/" class="secondary">

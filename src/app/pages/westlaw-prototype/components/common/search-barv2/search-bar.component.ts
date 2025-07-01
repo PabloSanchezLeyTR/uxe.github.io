@@ -148,7 +148,7 @@ export class SearchBarComponentv2 {
   toggleOptionSelected(option: ToggleOption) {
     this.selectedOption = option;
     console.log(option);
-    this.searchTypeChange.emit(this.selectedOption.label);
+    this.searchTypeChange.emit(option.label);
     if (option.label === 'Search') {
       setTimeout(() => {
         if (this.showDeepResearchMenu) {
@@ -267,7 +267,7 @@ export class SearchBarComponentv2 {
           ]);
         }else if(window.location.pathname.includes('new-research-v5')) {
           this.router.navigate([
-            '/westlaw-prototype/deep-research-v5/research-results',
+            '/westlaw-prototype/deep-research-v5/research-confirmation',
           ]);
         }else{
           this.router.navigate([

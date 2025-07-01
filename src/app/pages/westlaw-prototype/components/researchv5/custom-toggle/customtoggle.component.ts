@@ -8,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CustomToggleComponent {
   @Input() isChecked: boolean = false;
-  @Input() labelText: string = 'Email me when report is ready';
+  @Input() labelText: string = '';
   @Output() toggleChange = new EventEmitter<boolean>();
 
   constructor() { }
