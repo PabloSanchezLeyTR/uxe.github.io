@@ -42,10 +42,12 @@ import { QuickCheckComponentv5 } from './pages/westlaw-prototype/components/rese
 
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
+import { NewLandingComponent } from './pages/westlaw-prototype/components/researchv5/new-landing/landing.component';
 
 const routes: Routes = [
   // Login route (accessible without authentication)
   { path: 'login', component: LoginComponent },
+  { path: 'new-landing', component: NewLandingComponent },
 
   // Protected routes
   { path: 'app-jaime-research', canActivate: [AuthGuard], component: WijmoDemoComponent },
@@ -140,6 +142,10 @@ const routes: Routes = [
       canActivate: [AuthGuard],
       component: NewResearchComponentv5,
     },
+    // {
+    //   path: 'new-landing',
+    //   component: NewLandingComponent,
+    // },
     {
       path: 'deep-research-v5',
       canActivate: [AuthGuard],
