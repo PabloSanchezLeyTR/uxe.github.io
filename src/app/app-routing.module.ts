@@ -49,7 +49,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'new-landing', component: NewLandingComponent },
 
-  // Protected routes
+  // Protected routes\
+  { path: 'new-landing', canActivate: [AuthGuard], component: NewLandingComponent },
   { path: 'app-jaime-research', canActivate: [AuthGuard], component: WijmoDemoComponent },
   { path: 'research-history', canActivate: [AuthGuard], component: ResearchHistoryComponent },
   { path: 'my-research', canActivate: [AuthGuard], component: MyResearchComponent },
@@ -142,10 +143,11 @@ const routes: Routes = [
       canActivate: [AuthGuard],
       component: NewResearchComponentv5,
     },
-    // {
-    //   path: 'new-landing',
-    //   component: NewLandingComponent,
-    // },
+    {
+      path: 'new-landing',
+      canActivate: [AuthGuard],
+      component: NewLandingComponent,
+    },
     {
       path: 'deep-research-v5',
       canActivate: [AuthGuard],
