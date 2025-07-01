@@ -4,22 +4,53 @@
 //     background-image: url('/assets/images/banner-image.png');
 //   }
   
-  .westlaw-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Full viewport height */
-    // background-image:url('/assets/images/screen.png');
-  }
-  * {
-    margin: 0;
-    padding: 0;
-}
-  .imgbox {
-    display: grid;
-    height: 100%;
-}
-.center-fit {
-    max-width: 100%;
-    max-height: 100vh;
+img {
+    display: block;
     margin: auto;
+  }
+.bellyband-container{
+    width:1324px;
+    margin: auto;
+
+    .band{
+       background-color:#E3F1FD;
+       border-radius: 8px;
+       padding: 16px 24px 16px 24px;
+       height: 75px;
+       width:1331px;
+
+       h1{
+        font-weight:600;
+        font-size:20px;
+        margin-bottom:0px;
+       }
+
+       p{
+        font-weight: 400;
+        font-size:16px;
+       }
+
+       .left{
+        position: relative;
+        float:left;
+       }
+       .right{
+        position: relative;
+        float: right;
+       }
+
+       button{
+        background-color: #054688;
+        color:white;
+        border-radius:4px;
+        width: 140px;
+        height:40px;
+        font-size:16px;
+        font-weight:500;
+       }
+    }
+}
+
+.main-container{
+    background-color:#103A59;
 }
