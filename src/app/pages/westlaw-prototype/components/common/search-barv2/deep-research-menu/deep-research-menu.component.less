@@ -16,19 +16,22 @@
     padding: 5px 12px;
     border-radius: 8px;
     margin: 5px;
+    color: #212223;
     &:hover {
       background-color: #edf6ff;
-      outline: 2px solid var(--saf-color-interactive-secondary-active);
+      color:#032E5B;
+      //outline: 2px solid var(--saf-color-interactive-secondary-active);
     }
-    
   }
+
   .active{
-    background-color: #edf6ff;
+    //background-color: #edf6ff;
     outline: 2px solid var(--saf-color-interactive-secondary-active);
+
   }
 
   .item-name {
-    color: #212223;
+    
     font-family: Source Sans 3;
     font-weight: 400;
     font-size: 16px;
@@ -38,7 +41,7 @@
   }
 
   .description {
-    color: var(--color-text-subtle, #666);
+    // color: var(--color-text-subtle, #666);
 
     font-family: Source Sans 3;
     font-weight: 400;
@@ -77,4 +80,9 @@
   background: #F2F2F2;
   border-radius: 15px;
   margin-left:20px;
+}
+
+.item:hover .approx-time {
+    background: white;
+    border: 1px solid white;
 }

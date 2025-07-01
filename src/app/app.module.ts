@@ -94,6 +94,7 @@ import { LoginComponent } from './login/login.component';
 import { ResponseTimeMenuComponentv2 } from './pages/westlaw-prototype/components/common/search-barv2/response-time-menu/response-time-menu.component';
 import { DeepResearchMenuComponentv2 } from './pages/westlaw-prototype/components/common/search-barv2/deep-research-menu/deep-research-menu.component';
 import { CyclingCirclesComponent } from './pages/westlaw-prototype/components/common/cycle-circle/app-cycle-circles.component';
+import { CustomToggleComponent } from './pages/westlaw-prototype/components/researchv5/custom-toggle/customtoggle.component';
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   declarations: [
@@ -174,6 +175,7 @@ import { CyclingCirclesComponent } from './pages/westlaw-prototype/components/co
     QuickCheckComponentv5,
     LoginComponent,
     CyclingCirclesComponent,
+    CustomToggleComponent,
   ],
   imports: [
     BrowserModule,

@@ -25,6 +25,7 @@ export class ButtonComponentv2 {
   @Input() deepSearch: number = 0;
 
   ngOnChanges(changes: any): void {
+    console.log(changes);
     if (changes.deepSearch) {
       console.log('deepSearch changed to:', changes.deepSearch.currentValue);
     }
