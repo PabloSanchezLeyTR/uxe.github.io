@@ -570,30 +570,70 @@ div[contenteditable="true"]:empty::before {
   }
 }
 
-.button-icon{
+#anchor-paperclip {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 0px;
+  border-left: 1px solid #e6e6e6;  
+  border-radius: 10px 0px 0px 10px;
+  &:hover {
+    background-color: #E3F1FD;
+    border:1px solid #054688;
+    margin-right: -1px;
+  }
+}
 
+#anchor-history {
+  border-radius: 0px 10px 10px 0px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-left: 0px;
+  &:hover {
+    background-color: #E3F1FD;
+    border:1px solid #054688;
+    margin-left: -1px;
+    z-index: 1;
+  }
+}
+
+#anchor-task-lib {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  &:hover {
+    background-color: #E3F1FD;
+    border:1px solid #054688;
+  }
+}
+
+.base-button .btngrp .blue background-{
+  background-color: red;
 }
 
 .alt-button-group{
-  display:block;
+  display:contents;
   width:92px;
   position: relative;
   float:right;
-  border: 1px solid #e6e6e6;
-  border-radius:10px;
   app-button{
-    width:30px;
+    width: fit-content;
   }
 }
 
 .base-button{
   color:red;
 }
-#search-bar > div.button-groups > div.right-buttons > div > app-button:nth-child(5) {
-  border-right: 1px solid #e6e6e6;
-}
-#search-bar > div.button-groups > div.right-buttons > div > app-button:nth-child(1) {
-  border-left: 1px solid #e6e6e6;
+
+.button-tooltip {
+  background-color: #054688;
+;
+  color: white;
+
+  &::after{
+    background-color: #054688;
+  }
 }
 
 .email-me{
