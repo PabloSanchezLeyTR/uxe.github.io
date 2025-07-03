@@ -1,18 +1,37 @@
 <div class="search-bar" id="search-bar" *ngIf="!compactMode">
   <div class="border-gradient">
     <div class="input-container">
-      <div contenteditable="true" class="text-editor"
-        data-placeholder="Ask a question or enter the topic you’d like to research..." (input)="inputChanged($event)"
-        #searchInput></div>
-      <div class="mention-container" *ngIf="showMentions" [style.top.px]="mentionTop" [style.left.px]="mentionLeft">
-        <div class="mention-item" *ngFor="let mention of mentions" (click)="selectMention(mention.title)">
+      <div
+        contenteditable="true"
+        class="text-editor"
+        data-placeholder="Ask a question or enter the topic you’d like to research..."
+        (input)="inputChanged($event)"
+        #searchInput
+      ></div>
+      <div
+        class="mention-container"
+        *ngIf="showMentions"
+        [style.top.px]="mentionTop"
+        [style.left.px]="mentionLeft"
+      >
+        <div
+          class="mention-item"
+          *ngFor="let mention of mentions"
+          (click)="selectMention(mention.title)"
+        >
           <span class="mention-title"> {{ mention.title }}</span>
           <span class="mention-description">{{ mention.description }}</span>
         </div>
       </div>
       <div class="right-button">
-        <app-button [expanded]="false" [icon]="'arrow-up'" [backgroundColor]="'blue'" [color]="'white'"
-          [disabled]="!inputContent || inputContent.length <= 1" (click)="redirectToResearch()"></app-button>
+        <app-button
+          [expanded]="false"
+          [icon]="'arrow-up'"
+          [backgroundColor]="'blue'"
+          [color]="'white'"
+          [disabled]="!inputContent || inputContent.length <= 1"
+          (click)="redirectToResearch()"
+        ></app-button>
       </div>
     </div>
   </div>
@@ -21,16 +40,34 @@
           iconColor="blue-light" iconAppearance="solid" [secondIcon]="'close'"></app-button> -->
   <div class="button-groups">
     <div class="left-buttons">
-      <app-toggle [options]="toggleOptions" (selectedOptionChanged)="toggleOptionSelected($event)"
-        (click)="isFileUploadedDone = false; isFileLoading = false"></app-toggle>
-      <app-button [label]="'New York'" [font]="'clario'" [icon]="'location-dot'" [color]="'blue'"
-        [includeDropdown]="false" (click)="clickJurisdiction()"></app-button>
+      <app-toggle
+        [options]="toggleOptions"
+        (selectedOptionChanged)="toggleOptionSelected($event)"
+        (click)="isFileUploadedDone = false; isFileLoading = false"
+      ></app-toggle>
+      <app-button
+        [label]="'New York'"
+        [font]="'clario'"
+        [icon]="'location-dot'"
+        [color]="'blue'"
+        [includeDropdown]="false"
+        (click)="clickJurisdiction()"
+      ></app-button>
     </div>
     <div class="right-buttons">
-      <app-button [expanded]="false" [icon]="'paperclip'" [color]="'blue'" (click)="clickHandler()"></app-button>
+      <app-button
+        [expanded]="false"
+        [icon]="'paperclip'"
+        [color]="'blue'"
+        (click)="clickHandler()"
+      ></app-button>
       <!-- <app-button [expanded]="false" [icon]="'at'" [color]="'blue'" (click)="openTagDialog()"></app-button> -->
-      <app-button [expanded]="false" [icon]="'book-sparkles'" [color]="'blue'"
-        (click)="clickTaskLibrary()"></app-button>
+      <app-button
+        [expanded]="false"
+        [icon]="'book-sparkles'"
+        [color]="'blue'"
+        (click)="clickTaskLibrary()"
+      ></app-button>
     </div>
   </div>
   <!-- Commented due to new design -->
@@ -74,21 +111,49 @@
       </div>
     </div> -->
 
-  <div class="response-time-menu" *ngIf="showResponseTimeMenu" #responseTimeMenu>
-    <app-response-time-menu (searchTypeChanged)="closeSearchMenu($event)"></app-response-time-menu>
+  <div
+    class="response-time-menu"
+    *ngIf="showResponseTimeMenu"
+    #responseTimeMenu
+  >
+    <app-response-time-menu
+      (searchTypeChanged)="closeSearchMenu($event)"
+    ></app-response-time-menu>
   </div>
 
-  <div class="deep-research-menu" *ngIf="showDeepResearchMenu" #deepResearchMenu>
-    <app-deep-research-menu (searchTypeChanged)="closeDeepResearchMenu()"></app-deep-research-menu>
+  <div
+    class="deep-research-menu"
+    *ngIf="showDeepResearchMenu"
+    #deepResearchMenu
+  >
+    <app-deep-research-menu
+      (searchTypeChanged)="closeDeepResearchMenu()"
+    ></app-deep-research-menu>
   </div>
 </div>
 
 <!-- Attachment Dialog -->
-<saf-dialog #attachmentDialog class="attachment-dialog" id="button-dialog-overlay" modal="false" is-alert="false"
-  is-header="true" is-footer="true" no-focus-trap="false" dialog-title="Attach files" [hidden]="!openAttachmentDialog"
-  (hide)="closeDialog()" triggerId="button-dialog-trigger">
+<saf-dialog
+  #attachmentDialog
+  class="attachment-dialog"
+  id="button-dialog-overlay"
+  modal="false"
+  is-alert="false"
+  is-header="true"
+  is-footer="true"
+  no-focus-trap="false"
+  dialog-title="Attach files"
+  [hidden]="!openAttachmentDialog"
+  (hide)="closeDialog()"
+  triggerId="button-dialog-trigger"
+>
   <div class="dialog-info">
-    <saf-icon class="shield-icon" [appearance]="'solid'" icon-name="shield-check" size="16px"></saf-icon>
+    <saf-icon
+      class="shield-icon"
+      [appearance]="'solid'"
+      icon-name="shield-check"
+      size="16px"
+    ></saf-icon>
     <span>
       The security and privacy of your data is important to us. We employ
       multiple layers of security to keep it safe.
@@ -97,13 +162,25 @@
   </div>
   <div class="dialog-content">
     <div class="drop-area">
-      <p class="drop-area-text">Choose “Select files” or drag files into this space.</p>
-      <app-button [label]="'Select files'" [addBorder]="true" (click)="uploadFile()" backgroundColor="attach"
-        height="40px" width="113px"></app-button>
+      <p class="drop-area-text">
+        Choose “Select files” or drag files into this space.
+      </p>
+      <app-button
+        [label]="'Select files'"
+        [addBorder]="true"
+        (click)="uploadFile()"
+        backgroundColor="attach"
+        height="40px"
+        width="113px"
+      ></app-button>
 
       <p>
-        <span>Supported file types: TXT, HTM, HTML, RTF (20 MB per file)</span><br>
-        <span>Supported file types: PDF, DOC, DOCX, EML, MSG, WPD, ZIP (500 MB per file)</span>
+        <span>Supported file types: TXT, HTM, HTML, RTF (20 MB per file)</span
+        ><br />
+        <span
+          >Supported file types: PDF, DOC, DOCX, EML, MSG, WPD, ZIP (500 MB per
+          file)</span
+        >
       </p>
     </div>
   </div>
@@ -112,31 +189,68 @@
     <div class="loading-info">
       <p>Opponents-Work.docx</p>
       <div class="loading-progress">
-        <span>{{fileUploadStepText}}</span>
-        <saf-icon class="circle-xmark" icon-name="circle-xmark" size="16px"></saf-icon>
+        <span>{{ fileUploadStepText }}</span>
+        <saf-icon
+          class="circle-xmark"
+          icon-name="circle-xmark"
+          size="16px"
+        ></saf-icon>
       </div>
     </div>
-    <saf-progress indeterminate="true" completelabel="" min="0" max="100" [value]="fileUploadProgress" aria-valuemin="0"
-      aria-valuemax="100" status-color="loading">
+    <saf-progress
+      indeterminate="true"
+      completelabel=""
+      min="0"
+      max="100"
+      [value]="fileUploadProgress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      status-color="loading"
+    >
     </saf-progress>
   </div>
 
-  <div slot="footer" style="display: flex; gap: 12px; justify-content: flex-end; width: 100%">
-    <app-button [label]="'Cancel'" [addBorder]="true" (click)="closeDialog()"></app-button>
-    <app-button [label]="'Done'" [backgroundColor]="'blue'" [color]="isFileLoading ? 'white':'black'"
-      (click)="closeDialogDone()" [disabled]="!isFileLoading"></app-button>
-
+  <div
+    slot="footer"
+    style="display: flex; gap: 12px; justify-content: flex-end; width: 100%"
+  >
+    <app-button
+      [label]="'Cancel'"
+      [addBorder]="true"
+      (click)="closeDialog()"
+    ></app-button>
+    <app-button
+      [label]="'Done'"
+      [backgroundColor]="'blue'"
+      [color]="isFileLoading ? 'white' : 'black'"
+      (click)="closeDialogDone()"
+      [disabled]="!isFileLoading"
+    ></app-button>
   </div>
 </saf-dialog>
 
 <!-- Task Library Dialog -->
-<saf-dialog #taskLibraryDialog class="task-library-dialog" id="button-dialog-overlay" modal="false" is-alert="false"
-  is-header="true" is-footer="true" no-focus-trap="false" dialog-title="Task Library" [hidden]="!openTaskLibraryDialog"
-  (hide)="closeDialog()" triggerId="button-dialog-trigger">
+<saf-dialog
+  #taskLibraryDialog
+  class="task-library-dialog"
+  id="button-dialog-overlay"
+  modal="false"
+  is-alert="false"
+  is-header="true"
+  is-footer="true"
+  no-focus-trap="false"
+  dialog-title="Task Library"
+  [hidden]="!openTaskLibraryDialog"
+  (hide)="closeDialog()"
+  triggerId="button-dialog-trigger"
+>
   <div class="dialog content">
     <div class="search-section">
-      <saf-search-field density="inherit" a11y-aria-description="search workflows and prompts"
-        placeholder="Search Workflows and prompts">
+      <saf-search-field
+        density="inherit"
+        a11y-aria-description="search workflows and prompts"
+        placeholder="Search Workflows and prompts"
+      >
       </saf-search-field>
     </div>
 
@@ -149,7 +263,9 @@
         </div>
 
         <div class="filter-section">
-          <saf-text appearance="heading-md" density="inherit">Category</saf-text>
+          <saf-text appearance="heading-md" density="inherit"
+            >Category</saf-text
+          >
           <saf-checkbox>Research</saf-checkbox>
           <saf-checkbox>Review</saf-checkbox>
           <saf-checkbox>Draft</saf-checkbox>
@@ -170,46 +286,73 @@
         </div>
 
         <div class="bottom-toolbar">
-          <saf-anchor href="#"><saf-icon appearance="light" icon-name="cog"></saf-icon> Manage
-            Library</saf-anchor>
+          <saf-anchor href="#"
+            ><saf-icon appearance="light" icon-name="cog"></saf-icon> Manage
+            Library</saf-anchor
+          >
         </div>
       </div>
 
       <div class="results-panel">
         <div class="results-title">
-          <saf-text appearance="heading-md" density="inherit" class="card-title">Showing 42 results</saf-text>
-          <app-button [label]="'Sort by recent'" [icon]="'arrow-up-arrow-down'" [addBorder]="true"
-            [backgroundColor]="'white'" [color]="'#1D4B34'"></app-button>
+          <saf-text appearance="heading-md" density="inherit" class="card-title"
+            >Showing 42 results</saf-text
+          >
+          <app-button
+            [label]="'Sort by recent'"
+            [icon]="'arrow-up-arrow-down'"
+            [addBorder]="true"
+            [backgroundColor]="'white'"
+            [color]="'#1D4B34'"
+          ></app-button>
         </div>
         <div class="results-cards">
           <div class="result-card">
-            <saf-text appearance="heading-md" density="inherit" class="card-title">Legal Document
-              Analysis</saf-text>
+            <saf-text
+              appearance="heading-md"
+              density="inherit"
+              class="card-title"
+              >Legal Document Analysis</saf-text
+            >
             <p class="class-paragraph">
               Identify potential issues with a document’s cited authority and
               quotations.
             </p>
             <div class="workflow-footer">
               <saf-text density="inherit">Workflow</saf-text>
-              <saf-text density="inherit" class="steps-counter">• 4 steps</saf-text>
+              <saf-text density="inherit" class="steps-counter"
+                >• 4 steps</saf-text
+              >
             </div>
           </div>
 
           <div class="result-card">
-            <saf-text appearance="heading-md" density="inherit" class="card-title">Jurisdictional Survey
-              <saf-icon appearance="light" icon-name="user-group"></saf-icon></saf-text>
+            <saf-text
+              appearance="heading-md"
+              density="inherit"
+              class="card-title"
+              >Jurisdictional Survey
+              <saf-icon appearance="light" icon-name="user-group"></saf-icon
+            ></saf-text>
             <p class="class-paragraph">
               Research and summarize relevant laws and regulations across
               multiple jurisdictions.
             </p>
             <div class="workflow-footer">
               <saf-text density="inherit">Workflow</saf-text>
-              <saf-text density="inherit" class="steps-counter">• 4 steps</saf-text>
+              <saf-text density="inherit" class="steps-counter"
+                >• 4 steps</saf-text
+              >
             </div>
           </div>
 
           <div class="result-card">
-            <saf-text appearance="heading-md" density="inherit" class="card-title">Find Claims</saf-text>
+            <saf-text
+              appearance="heading-md"
+              density="inherit"
+              class="card-title"
+              >Find Claims</saf-text
+            >
             <p class="class-paragraph">
               Identify and analyze potential legal claims based on provided
               facts and documents.
@@ -217,42 +360,65 @@
 
             <div class="workflow-footer">
               <saf-text density="inherit">Workflow </saf-text>
-              <saf-text density="inherit" class="steps-counter">• 4 steps</saf-text>
+              <saf-text density="inherit" class="steps-counter"
+                >• 4 steps</saf-text
+              >
             </div>
           </div>
 
           <div class="result-card">
-            <saf-text appearance="heading-md" density="inherit" class="card-title">Draft Demand Letter</saf-text>
+            <saf-text
+              appearance="heading-md"
+              density="inherit"
+              class="card-title"
+              >Draft Demand Letter</saf-text
+            >
             <p class="class-paragraph">
               Prepare a claim with supporting facts and desired resolution.
             </p>
             <div class="workflow-footer">
               <saf-text density="inherit">Workflow </saf-text>
-              <saf-text density="inherit" class="steps-counter">• 4 steps</saf-text>
+              <saf-text density="inherit" class="steps-counter"
+                >• 4 steps</saf-text
+              >
             </div>
           </div>
 
           <div class="result-card">
-            <saf-text appearance="heading-md" density="inherit" class="card-title">Draft Complaint</saf-text>
+            <saf-text
+              appearance="heading-md"
+              density="inherit"
+              class="card-title"
+              >Draft Complaint</saf-text
+            >
             <p class="class-paragraph">
-              Create complaint sections based on parties involved,
-              jurisdiction, case type, and reference documents on facts.
+              Create complaint sections based on parties involved, jurisdiction,
+              case type, and reference documents on facts.
             </p>
             <div class="workflow-footer">
               <saf-text density="inherit">Workflow </saf-text>
-              <saf-text density="inherit" class="steps-counter">• 4 steps</saf-text>
+              <saf-text density="inherit" class="steps-counter"
+                >• 4 steps</saf-text
+              >
             </div>
           </div>
 
           <div class="result-card">
-            <saf-text appearance="heading-md" density="inherit" class="card-title">Timeline</saf-text>
+            <saf-text
+              appearance="heading-md"
+              density="inherit"
+              class="card-title"
+              >Timeline</saf-text
+            >
             <p class="class-paragraph">
               Create a detailed timeline of events from case documents and
               evidence.
             </p>
             <div class="workflow-footer">
               <saf-text density="inherit">Workflow </saf-text>
-              <saf-text density="inherit" class="steps-counter">• 4 steps</saf-text>
+              <saf-text density="inherit" class="steps-counter"
+                >• 4 steps</saf-text
+              >
             </div>
           </div>
         </div>
@@ -262,20 +428,39 @@
 </saf-dialog>
 
 <!-- Jurisdiction Dialog -->
-<saf-dialog #jurisdictionDialog class="jurisdiction-dialog" id="button-dialog-overlay" modal="false" is-alert="false"
-  is-header="true" is-footer="true" no-focus-trap="false" dialog-title="Jurisdiction"
-  dialog-subtitle="1 jurisdiction selected. Select up to 3." [hidden]="!openJurisdictionDialog"
-  (hide)="closeJurisdictionDialog()" triggerId="button-dialog-trigger">
+<saf-dialog
+  #jurisdictionDialog
+  class="jurisdiction-dialog"
+  id="button-dialog-overlay"
+  modal="false"
+  is-alert="false"
+  is-header="true"
+  is-footer="true"
+  no-focus-trap="false"
+  dialog-title="Jurisdiction"
+  dialog-subtitle="1 jurisdiction selected. Select up to 3."
+  [hidden]="!openJurisdictionDialog"
+  (hide)="closeJurisdictionDialog()"
+  triggerId="button-dialog-trigger"
+>
   <div class="jurisdiction-dialog">
     <div class="dialog-row">
-      <app-button [addBorder]="true" label="Clear All" color="racing-green"></app-button>
+      <app-button
+        [addBorder]="true"
+        label="Clear All"
+        color="racing-green"
+      ></app-button>
       <app-button [icon]="'keyboard'"></app-button>
     </div>
 
     <div class="checkbox-section">
       <div>
         <div class="checkbox-header">
-          <saf-checkbox><saf-text appearance="heading-lg" density="inherit">All States</saf-text></saf-checkbox>
+          <saf-checkbox
+            ><saf-text appearance="heading-lg" density="inherit"
+              >All States</saf-text
+            ></saf-checkbox
+          >
         </div>
         <div class="checkbox-grid">
           <div>
@@ -346,18 +531,31 @@
           </div>
         </div>
         <div class="checkbox-header">
-          <saf-checkbox><saf-text appearance="heading-lg" density="inherit">Include related
-              federal</saf-text><saf-icon color="#032E5B" icon-name="circle-question" appearance="light">
-            </saf-icon></saf-checkbox>
+          <saf-checkbox
+            ><saf-text appearance="heading-lg" density="inherit"
+              >Include related federal</saf-text
+            ><saf-icon
+              color="#032E5B"
+              icon-name="circle-question"
+              appearance="light"
+            >
+            </saf-icon
+          ></saf-checkbox>
         </div>
       </div>
 
       <div>
         <div class="checkbox-header">
-          <saf-checkbox><saf-text appearance="heading-lg" density="inherit">All Federal</saf-text></saf-checkbox>
+          <saf-checkbox
+            ><saf-text appearance="heading-lg" density="inherit"
+              >All Federal</saf-text
+            ></saf-checkbox
+          >
         </div>
         <div class="checkbox-header">
-          <saf-text appearance="heading-md" density="inherit">By Court</saf-text>
+          <saf-text appearance="heading-md" density="inherit"
+            >By Court</saf-text
+          >
         </div>
         <div class="checkbox-grid-single">
           <saf-checkbox>United States Supreme Court</saf-checkbox>
@@ -368,8 +566,13 @@
           <saf-checkbox>U.S. Court of Federal Claims</saf-checkbox>
         </div>
         <div class="checkbox-header">
-          <saf-text appearance="heading-md" density="inherit">By Circuit</saf-text><saf-icon color="#032E5B"
-            icon-name="circle-question" appearance="light">
+          <saf-text appearance="heading-md" density="inherit"
+            >By Circuit</saf-text
+          ><saf-icon
+            color="#032E5B"
+            icon-name="circle-question"
+            appearance="light"
+          >
           </saf-icon>
         </div>
         <div class="checkbox-grid-small">
@@ -396,30 +599,79 @@
     </div>
   </div>
 
-  <div slot="footer" style="display: flex; gap: 12px; justify-content: flex-end; width: 100%">
-    <app-button [label]="'Cancel'" [addBorder]="true" color="secondary"
-      (click)="closeJurisdictionDialog()"></app-button>
-    <app-button [label]="'Save'" [backgroundColor]="'blue'" [color]="'white'"
-      (click)="closeJurisdictionDialog()"></app-button>
+  <div
+    slot="footer"
+    style="display: flex; gap: 12px; justify-content: flex-end; width: 100%"
+  >
+    <app-button
+      [label]="'Cancel'"
+      [addBorder]="true"
+      color="secondary"
+      (click)="closeJurisdictionDialog()"
+    ></app-button>
+    <app-button
+      [label]="'Save'"
+      [backgroundColor]="'blue'"
+      [color]="'white'"
+      (click)="closeJurisdictionDialog()"
+    ></app-button>
   </div>
 </saf-dialog>
 
-<div class="compact-search-container" id="search-bar" *ngIf="compactMode" #compactSearchBar>
+<div
+  class="compact-search-container"
+  id="search-bar"
+  *ngIf="compactMode"
+  #compactSearchBar
+>
   <div class="search-bar-compact">
     <div class="input-container-compact">
-      <div class="compact-input" [class.focused]="isCompactSearchBarFocused" contenteditable="true"
-        data-placeholder="Ask me to perform research tasks and more…" (focus)="focusCompactModeSearchBar()"  (input)="inputChanged($event)">
-      </div>
+      <div
+        class="compact-input"
+        [class.focused]="isCompactSearchBarFocused"
+        contenteditable="true"
+        data-placeholder="Ask me to perform research tasks and more…"
+        (focus)="focusCompactModeSearchBar()"
+        (input)="inputChanged($event)"
+      ></div>
       <div class="submit-button-compact">
-        <app-button [expanded]="false" [icon]="'arrow-up'" [backgroundColor]="'blue'" [color]="'white'"
-          [disabled]="!inputContent || inputContent.length <= 1"></app-button>
+        <app-button
+          [ngClass]="
+            !inputContent || inputContent.length <= 1
+              ? 'submit-button-icon-disabled'
+              : 'submit-button-icon'
+          "
+          [label]="'New York'"
+          [font]="'clario'"
+          [icon]="'location-dot'"
+          [color]="!inputContent || inputContent.length <= 1 ? 'gray' : 'blue'"
+          [includeDropdown]="false"
+          [hidden]="!isCompactSearchBarFocused"
+        ></app-button>
+        <app-button
+          [expanded]="false"
+          [icon]="'arrow-up'"
+          [backgroundColor]="'blue'"
+          [color]="'white'"
+          [disabled]="!inputContent || inputContent.length <= 1"
+        ></app-button>
       </div>
     </div>
   </div>
 
   <div class="right-buttons-compact" *ngIf="isCompactSearchBarFocused">
-    <app-button [expanded]="false" [icon]="'paperclip'" [color]="'blue'" (click)="clickHandler()"></app-button>
-    <app-button [expanded]="false" [icon]="'book-sparkles'" [color]="'blue'" (click)="clickTaskLibrary()"></app-button>
+    <app-button
+      [expanded]="false"
+      [icon]="'paperclip'"
+      [color]="'blue'"
+      (click)="clickHandler()"
+    ></app-button>
+    <app-button
+      [expanded]="false"
+      [icon]="'book-sparkles'"
+      [color]="'blue'"
+      (click)="clickTaskLibrary()"
+    ></app-button>
     <app-button [expanded]="false" [icon]="'at'" [color]="'blue'"></app-button>
   </div>
 </div>

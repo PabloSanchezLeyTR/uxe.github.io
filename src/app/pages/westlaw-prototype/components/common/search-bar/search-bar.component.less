@@ -300,6 +300,7 @@ div[contenteditable="true"]:empty::before {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-direction: column;
 }
 
 .input-container-compact .compact-input {
@@ -310,6 +311,7 @@ div[contenteditable="true"]:empty::before {
   padding: 0px 10px;
   background-color: #ffffff;
   overflow: auto;
+  align-self: baseline;
 }
 
 .compact-input.focused {
@@ -520,6 +522,18 @@ div[contenteditable="true"]:empty::before {
 }
 
 .submit-button-compact {
-  align-self: stretch;
+  display: flex;
+  align-self: end;
   padding-top: 2px;
+  width: fit-content;
+}
+
+.submit-button-icon {
+  width: max-content;
+}
+
+.submit-button-icon-disabled {
+  color:#666666;
+  cursor: not-allowed;
+  pointer-events: none;
 }

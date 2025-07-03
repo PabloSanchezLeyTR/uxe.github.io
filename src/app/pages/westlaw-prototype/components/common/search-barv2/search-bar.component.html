@@ -740,6 +740,19 @@
       ></div>
       <div class="submit-button-compact">
         <app-button
+          [ngClass]="
+            !inputContent || inputContent.length <= 1
+              ? 'submit-button-icon-disabled'
+              : 'submit-button-icon'
+          "
+          [label]="'New York'"
+          [font]="'clario'"
+          [icon]="'location-dot'"
+          [color]="!inputContent || inputContent.length <= 1 ? 'gray' : 'blue'"
+          [includeDropdown]="false"
+          [hidden]="!isCompactSearchBarFocused"
+        ></app-button>
+        <app-button
           [expanded]="false"
           [icon]="'arrow-up'"
           [backgroundColor]="'blue'"
