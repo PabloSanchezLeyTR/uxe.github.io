@@ -31,6 +31,7 @@ export class SearchBarComponentv2 {
   isFileUploadedDone: boolean = false;
   fileUploadProgress: number = 0;
   fileUploadStepText: string = 'Uploading...';
+  isKebabMenuOpen: boolean = false;
   deepSearch: number = 2;
 
   @ViewChild('dialog', { static: false }) attachmentDialog: any;

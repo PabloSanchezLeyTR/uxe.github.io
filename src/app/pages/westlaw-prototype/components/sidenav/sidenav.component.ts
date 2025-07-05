@@ -17,19 +17,21 @@ export class SidenavComponent {
   collapsed = true;
   
   menuButtons = [
-    { icon: 'circle-plus', label: 'New chat', action: () => this.navigateTo('westlaw-prototype/new-research') },
-    { icon: 'message-dots', label: 'Current chat' },
+    { icon: 'magnifying-glass', label: 'Search', action: () => this.navigateTo('westlaw-prototype/new-research') },
+    { icon: 'telescope', label: 'Deep AI Research' },
     { icon: 'clock-rotate-left', label: 'History' },
-    { icon: 'books', label: 'Browse' },
     { icon: 'folders', label: 'Folders' },
-    { icon: 'grid-2', label: 'More tools' }
+    { icon: 'link-simple', label: 'My links' },
+    { icon: 'sparkles', label: 'CoCounsel' },
+    { icon: 'bell', label: 'Notification' }
   ];
 
   bottomButtons = [
-    { icon: 'stopwatch', label: 'Client: 345343' },
-    { icon: 'square-sliders', label: 'Settings', action: () =>  this.toggleSettings() },
+    { icon: 'id-card', label: 'Client: 345343' },
     { icon: 'circle-question', label: 'Help' },
-    { icon: 'circle-user', label: 'Account' }
+    { icon: 'grid-2', label: 'Tools', action: () =>  this.toggleSettings() },
+    { icon: 'circle-user', label: 'Profile' },
+    { icon: 'door-open', label: 'Sign Out' }
   ];
 
   selectedFontSize: number = 2;

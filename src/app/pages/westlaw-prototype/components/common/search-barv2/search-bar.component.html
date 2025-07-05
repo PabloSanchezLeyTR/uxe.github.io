@@ -91,13 +91,15 @@
               </div>
             </ng-template> -->
         <app-button
-          class="button-icon"
+          [ngClass]="isKebabMenuOpen ? 'button-icon-active' : 'button-icon'"
           id="anchor-history"
           [expanded]="false"
           [icon]="'reply-clock'"
-          [color]="'blue'"
+          [color]="isKebabMenuOpen ? 'white' : 'blue'"
           [ngbPopover]="kebabMenu"
           placement="bottom"
+          (shown)="isKebabMenuOpen = true"
+          (hidden)="isKebabMenuOpen = false"
         ></app-button>
         <ng-template #kebabMenu id="history-pop">
           <div class="popover-wrapper">
@@ -138,11 +140,11 @@
         </saf-tooltip>
 
         <app-button
-          class="button-icon"
+          [ngClass]="openTaskLibraryDialog ? 'button-icon-active' : 'button-icon'"
           id="anchor-task-lib"
           [expanded]="false"
           [icon]="'dashboard'"
-          [color]="'blue'"
+          [color]="openTaskLibraryDialog ? 'white' : 'blue'"
           (click)="clickTaskLibrary()"
         ></app-button>
         <saf-tooltip
@@ -154,11 +156,11 @@
         </saf-tooltip>
 
         <app-button
-          class="button-icon"
+          [ngClass]="openAttachmentDialog ? 'button-icon-active' : 'button-icon'"
           id="anchor-paperclip"
           [expanded]="false"
           [icon]="'paperclip'"
-          [color]="'blue'"
+          [color]="openAttachmentDialog ? 'white' : 'blue'"
           (click)="clickHandler()"
         ></app-button>
         <saf-tooltip
