@@ -579,7 +579,7 @@ div[contenteditable="true"]:empty::before {
   border-right: 0px;
   border-left: 1px solid #e6e6e6;  
   border-radius: 10px 0px 0px 10px;
-  &:hover {
+  &:hover:not(.button-icon-active) {
     background-color: #E3F1FD;
     border:1px solid #054688;
     margin-right: -1px;
@@ -592,7 +592,7 @@ div[contenteditable="true"]:empty::before {
   border-bottom: 1px solid #e6e6e6;
   border-right: 1px solid #e6e6e6;
   border-left: 0px;
-  &:hover {
+  &:hover:not(.button-icon-active) {
     background-color: #E3F1FD;
     border:1px solid #054688;
     margin-left: -1px;
@@ -605,7 +605,7 @@ div[contenteditable="true"]:empty::before {
   border-bottom: 1px solid #e6e6e6;
   border-right: 1px solid #e6e6e6;
   border-left: 1px solid #e6e6e6;
-  &:hover {
+  &:hover:not(.button-icon-active) {
     background-color: #E3F1FD;
     border:1px solid #054688;
   }
