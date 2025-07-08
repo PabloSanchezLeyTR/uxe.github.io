@@ -15,11 +15,11 @@ import { SEARCH_SUGGESTIONS } from '../../../data/search-suggestions';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-search-bar-v2',
+  selector: 'app-search-bar-v6',
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.less'],
 })
-export class SearchBarComponentv2 {
+export class SearchBarComponentv6 {
   @ViewChild('responseTimeMenu') responseTimeMenu!: ElementRef<HTMLDivElement>;
   @ViewChild('deepResearchMenu') deepResearchMenu!: ElementRef<HTMLDivElement>;
   @ViewChild('compactSearchBar') compactSearchBar!: ElementRef<HTMLDivElement>;
@@ -109,15 +109,7 @@ export class SearchBarComponentv2 {
 
   toggleOptions: ToggleOption[] = [
     {
-      label: 'Search',
-      textColor: 'blue',
-      icon: 'magnifying-glass',
-      deepSearch: 0,
-      includeDropdown: true,
-      dropdownOnlyWhenActive: true,
-    },
-    {
-      label: 'Deep AI Research',
+      label: 'Standard',
       icon: 'telescope',
       deepSearch: this.deepSearch,
       textColor: 'blue',
@@ -157,7 +149,7 @@ export class SearchBarComponentv2 {
         }
         this.showResponseTimeMenu = true;
       });
-    } else if (option.label === 'Deep AI Research') {
+    } else if (option.label === 'Deep AI Research' || option.label === 'Quick' || option.label === 'Standard' || option.label === 'Expanded') {
       setTimeout(() => {
         if (this.showResponseTimeMenu) {
           this.showResponseTimeMenu = false;
@@ -253,7 +245,7 @@ export class SearchBarComponentv2 {
 
   redirectToResearch() {
     if (this.inputContent && this.inputContent.length > 0) {
-      if (this.selectedOption?.label === 'Deep AI Research') {
+      if (this.selectedOption?.label === 'Deep AI Research' || this.selectedOption?.label === 'Quick' || this.selectedOption?.label === 'Standard'  || this.selectedOption?.label === 'Expanded' ) {
         if(window.location.pathname.includes('new-research-v2')) {
           this.router.navigate([
             '/westlaw-prototype/deep-research-v2/research-confirmation',
@@ -270,9 +262,9 @@ export class SearchBarComponentv2 {
           this.router.navigate([
             '/westlaw-prototype/deep-research-v5/research-confirmation',
           ]);
-        }else if(window.location.pathname.includes('new-landing-v2')) {
+        }else if(window.location.pathname.includes('new-landing-v6')) {
           this.router.navigate([
-            '/westlaw-prototype/deep-research-v6/research-confirmation',
+            '/westlaw-prototype/deep-research-v6/research-results',
           ]);
         }else{
           this.router.navigate([
@@ -356,6 +348,15 @@ export class SearchBarComponentv2 {
   handleDeepSearchChange(deepSearch:number){
     this.deepSearch = deepSearch;
     console.log(this.deepSearch);
-    this.toggleOptions[1].deepSearch = deepSearch;
+    this.toggleOptions[0].deepSearch = deepSearch;
+    if(deepSearch === 1){
+      this.toggleOptions[0].label = 'Quick';
+    }
+    if(deepSearch === 2){
+      this.toggleOptions[0].label = 'Standard';
+    }
+    if(deepSearch === 3){
+      this.toggleOptions[0].label = 'Expanded';
+    }
   }
 }

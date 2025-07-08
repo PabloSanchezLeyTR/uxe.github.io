@@ -44,13 +44,22 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { NewLandingComponent } from './pages/westlaw-prototype/components/researchv5/new-landing/landing.component';
 
+import { NewLandingComponentv6 } from './pages/westlaw-prototype/components/researchv6/new-landing/landing.component';
+import { NewResearchComponentv6 } from './pages/westlaw-prototype/components/researchv6/new-research/new-research.component';
+import { DeepResearchConfirmationComponentv6 } from './pages/westlaw-prototype/components/researchv6/deep-research-confirmation/deep-research-confirmation.component';
+import { DeepResearchResultComponentv6 } from './pages/westlaw-prototype/components/researchv6/deep-research-result/deep-research-result.component';
+import { QuickCheckComponentv6 } from './pages/westlaw-prototype/components/researchv6/quick-check/quick-check.component';
+import { KeywordSearchResultsComponentv6 } from './pages/westlaw-prototype/components/researchv6/keyword-search-results/keyword-search-results.component';
+import { CaseDetailsComponentv6 } from './pages/westlaw-prototype/components/researchv6/case-details/case-details.component';
+
 const routes: Routes = [
   // Login route (accessible without authentication)
   { path: 'login', component: LoginComponent },
-  { path: 'new-landing', component: NewLandingComponent },
+  // { path: 'new-landing', component: NewLandingComponent },
 
   // Protected routes\
   { path: 'new-landing', canActivate: [AuthGuard], component: NewLandingComponent },
+  { path: 'new-landing-v6', canActivate: [AuthGuard], component: NewLandingComponentv6 },
   { path: 'app-jaime-research', canActivate: [AuthGuard], component: WijmoDemoComponent },
   { path: 'research-history', canActivate: [AuthGuard], component: ResearchHistoryComponent },
   { path: 'my-research', canActivate: [AuthGuard], component: MyResearchComponent },
@@ -170,6 +179,37 @@ const routes: Routes = [
       ]
     },
     {
+      path: 'new-research-v6',
+      canActivate: [AuthGuard],
+      component: NewResearchComponentv6,
+    },
+    {
+      path: 'new-landing-v6',
+      canActivate: [AuthGuard],
+      component: NewLandingComponentv6,
+    },
+    {
+      path: 'deep-research-v6',
+      canActivate: [AuthGuard],
+      children: [
+        {
+          path: 'research-confirmation',
+          canActivate: [AuthGuard],
+          component: DeepResearchConfirmationComponentv6
+        },
+        {
+          path: 'research-results',
+          canActivate: [AuthGuard],
+          component: DeepResearchResultComponentv6
+        },
+        {
+          path: 'quick-check',
+          canActivate: [AuthGuard],
+          component: QuickCheckComponentv6
+        },
+      ]
+    },
+    {
       path: 'deep-research',
       canActivate: [AuthGuard],
       children: [
@@ -239,6 +279,16 @@ const routes: Routes = [
       path: 'case-detailsv5',
       canActivate: [AuthGuard],
       component: CaseDetailsComponentv5
+    },
+    {
+      path: 'keyword-searchv6',
+      canActivate: [AuthGuard],
+      component: KeywordSearchResultsComponentv6
+    },
+    {
+      path: 'case-detailsv6',
+      canActivate: [AuthGuard],
+      component: CaseDetailsComponentv6
     },
   ]},
 

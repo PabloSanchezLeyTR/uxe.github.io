@@ -646,6 +646,8 @@ export class WijmoDemoComponent {
       this.router.navigate(['/westlaw-prototype/new-research-v4']);
     }else if(version === 'v5'){
       this.router.navigate(['/new-landing']);
+    }else if(version === 'v6'){
+      this.router.navigate(['/new-landing-v6']);
     }else{
       this.router.navigate(['/westlaw-prototype/new-research']);
     }
