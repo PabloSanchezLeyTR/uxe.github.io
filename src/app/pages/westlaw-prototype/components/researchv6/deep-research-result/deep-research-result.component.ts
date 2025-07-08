@@ -91,6 +91,7 @@ export class DeepResearchResultComponentv6 {
 
   expandedFooter: boolean = false;
   togglePlan: boolean = false;
+  toggleReport: boolean = true;
   selectedTabIndex: number = 0;
 
   sources = sourcesData;
@@ -436,6 +437,13 @@ export class DeepResearchResultComponentv6 {
     }
 
     return true;
+  }
+
+  handleToggleSteps(){
+    this.togglePlan = !this.togglePlan;
+  }
+  handleToggleReport(){
+    this.toggleReport = !this.toggleReport;
   }
   
 }

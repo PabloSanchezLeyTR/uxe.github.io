@@ -264,7 +264,7 @@ export class SearchBarComponentv6 {
           ]);
         }else if(window.location.pathname.includes('new-landing-v6')) {
           this.router.navigate([
-            '/westlaw-prototype/deep-research-v6/research-results',
+            '/westlaw-prototype-v2/deep-research-v6/research-results',
           ]);
         }else{
           this.router.navigate([

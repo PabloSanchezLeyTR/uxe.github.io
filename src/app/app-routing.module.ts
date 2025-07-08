@@ -51,6 +51,7 @@ import { DeepResearchResultComponentv6 } from './pages/westlaw-prototype/compone
 import { QuickCheckComponentv6 } from './pages/westlaw-prototype/components/researchv6/quick-check/quick-check.component';
 import { KeywordSearchResultsComponentv6 } from './pages/westlaw-prototype/components/researchv6/keyword-search-results/keyword-search-results.component';
 import { CaseDetailsComponentv6 } from './pages/westlaw-prototype/components/researchv6/case-details/case-details.component';
+import { HomeComponentv2 } from './pages/westlaw-prototype/components/homev2/home.component';
 
 const routes: Routes = [
   // Login route (accessible without authentication)
@@ -63,6 +64,49 @@ const routes: Routes = [
   { path: 'app-jaime-research', canActivate: [AuthGuard], component: WijmoDemoComponent },
   { path: 'research-history', canActivate: [AuthGuard], component: ResearchHistoryComponent },
   { path: 'my-research', canActivate: [AuthGuard], component: MyResearchComponent },
+  { path: 'westlaw-prototype-v2', canActivate: [AuthGuard], component: HomeComponentv2, children: [
+    {
+      path: 'new-research-v6',
+      canActivate: [AuthGuard],
+      component: NewResearchComponentv6,
+    },
+    {
+      path: 'new-landing-v6',
+      canActivate: [AuthGuard],
+      component: NewLandingComponentv6,
+    },
+    {
+      path: 'deep-research-v6',
+      canActivate: [AuthGuard],
+      children: [
+        {
+          path: 'research-confirmation',
+          canActivate: [AuthGuard],
+          component: DeepResearchConfirmationComponentv6
+        },
+        {
+          path: 'research-results',
+          canActivate: [AuthGuard],
+          component: DeepResearchResultComponentv6
+        },
+        {
+          path: 'quick-check',
+          canActivate: [AuthGuard],
+          component: QuickCheckComponentv6
+        },
+      ]
+    },
+    {
+      path: 'keyword-searchv6',
+      canActivate: [AuthGuard],
+      component: KeywordSearchResultsComponentv6
+    },
+    {
+      path: 'case-detailsv6',
+      canActivate: [AuthGuard],
+      component: CaseDetailsComponentv6
+    },
+  ]},
   { path: 'westlaw-prototype', canActivate: [AuthGuard], component: HomeComponent, children: [
     {
       path: 'new-research',
@@ -179,37 +223,6 @@ const routes: Routes = [
       ]
     },
     {
-      path: 'new-research-v6',
-      canActivate: [AuthGuard],
-      component: NewResearchComponentv6,
-    },
-    {
-      path: 'new-landing-v6',
-      canActivate: [AuthGuard],
-      component: NewLandingComponentv6,
-    },
-    {
-      path: 'deep-research-v6',
-      canActivate: [AuthGuard],
-      children: [
-        {
-          path: 'research-confirmation',
-          canActivate: [AuthGuard],
-          component: DeepResearchConfirmationComponentv6
-        },
-        {
-          path: 'research-results',
-          canActivate: [AuthGuard],
-          component: DeepResearchResultComponentv6
-        },
-        {
-          path: 'quick-check',
-          canActivate: [AuthGuard],
-          component: QuickCheckComponentv6
-        },
-      ]
-    },
-    {
       path: 'deep-research',
       canActivate: [AuthGuard],
       children: [
@@ -279,16 +292,6 @@ const routes: Routes = [
       path: 'case-detailsv5',
       canActivate: [AuthGuard],
       component: CaseDetailsComponentv5
-    },
-    {
-      path: 'keyword-searchv6',
-      canActivate: [AuthGuard],
-      component: KeywordSearchResultsComponentv6
-    },
-    {
-      path: 'case-detailsv6',
-      canActivate: [AuthGuard],
-      component: CaseDetailsComponentv6
     },
   ]},
 

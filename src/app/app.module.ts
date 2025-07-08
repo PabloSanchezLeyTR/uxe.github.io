@@ -112,6 +112,7 @@ import { SourcesComponentv6 } from './pages/westlaw-prototype/components/researc
 import { NotesComponentv6 } from './pages/westlaw-prototype/components/researchv6/deep-research-result/notes/notes.component'; // Verify this path exists or correct it
 import { QuickCheckComponentv6 } from './pages/westlaw-prototype/components/researchv6/quick-check/quick-check.component';
 import { NewResearchComponentv6 } from './pages/westlaw-prototype/components/researchv6/new-research/new-research.component';
+import { HomeComponentv2 } from './pages/westlaw-prototype/components/homev2/home.component';
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   declarations: [
@@ -120,6 +121,7 @@ import { NewResearchComponentv6 } from './pages/westlaw-prototype/components/res
     ResearchHistoryComponent,
     WijmoDemoComponent,
     HomeComponent,
+    HomeComponentv2,
     SidenavComponent,
     ButtonComponent,
     ButtonComponentv2,

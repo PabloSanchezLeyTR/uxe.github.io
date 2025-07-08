@@ -531,10 +531,10 @@ h3 {
 }
 
 .report-status-section {
-  border-radius: 8px 8px 4px 4px;
-  background: var(--color-sky-100, #FAFAFA);
+  border-radius: 8px 8px 8px 8px;
+  background: #ededed;
   padding: 6px 0 0 0;
-  max-width: 358px;
+  max-width: 338px;
   margin: 16px 0;
 
   .wrapper {
@@ -779,7 +779,7 @@ button{
   .left-panel-conatiner{
     padding:24px 20px;
     height: 100%;
-    max-height: calc(100% - 215px);
+    max-height: calc(100% - 175px);
     overflow-y:scroll;
   }
   .left-panel-header{
@@ -1121,10 +1121,77 @@ saf-icon{
 }
 
 .two-panel-header{
-  display: flex;
-  justify-content: center ;
-  background-color:#032E5B;
-  img{
-    height:100px;
+  display: block;
+  //justify-content: center ;
+  background-color:#173452;
+  height:75px;
+  // img{
+  //   width: 1270px;
+  // }
+  .header-container{
+    max-width: 1270px;
+    margin: 0px auto;
   }
+  .left-header{
+    position: relative;
+    float: left;
+    top:25px;
+    left:25px
+  }
+  .right-header{
+    position:relative;
+    float:right;
+    top:25px;
+
+    .sign-out{
+      border: 1px solid #fff3
+    }
+
+    button{
+      color:white;
+      background:transparent;
+      border:none;
+      font-size:12px;
+      margin-right:10px;
+      &:hover{
+        background-color:#ffffff1a;
+      }
+      .Svg{
+        width:25px;
+        max-width: none;
+        display: block;
+        .Svg-inner{
+          display:block;
+          height:0;
+          padding-bottom:100%;
+          position: relative;
+          width:100%;
+
+          svg{
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .sign-out{
+      border: 1px solid #fff3
+    }
+  }
+}
+
+.icon25{
+  background-image: url('/assets/images/th_indigo_icons.svg');
+    background-repeat: no-repeat;
+    background-size: 15.625em;
+    display: inline-block;
+    font-size: 16px;
+    height: 1.5625em;
+    text-indent: -999em;
+    vertical-align: middle;
+    width: 1.5625em;
+    background-position: -3.125em -317.1875em;
 }

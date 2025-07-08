@@ -12,7 +12,7 @@ import { BookmarksComponent } from '../../bookmarks/bookmarks.component';
 export class NewResearchComponentv6 {
   constructor(private router: Router) {}
 
-  searchType: string = 'Search'; // Default value
+  searchType: string = 'Standard'; // Default value
   href: string ='';
 
   ngOnInit() {
