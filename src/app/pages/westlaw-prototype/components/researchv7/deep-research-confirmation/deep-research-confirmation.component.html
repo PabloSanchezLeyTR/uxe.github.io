@@ -95,17 +95,18 @@
         <saf-icon (click)="handleAddToPlan($event)" class="search-icon" icon-name="arrow-up" size="16px" appearance="light"></saf-icon>
       </div>
       <div class="actions-left">
-        <button class="primary" (click)="handleEditPlan()">
+        <button class="secondary" (click)="handleEditPlan()">
           Edit Plan
         </button>
       </div>
       <div class="actions-right">
+        <button routerLink="/westlaw-prototype/" class="tertiary">
+          Cancel
+        </button>
         <button routerLink="/westlaw-prototype/deep-research-v5/research-results" class="primary start-research">
           Start research
         </button>
-        <button routerLink="/westlaw-prototype/" class="secondary">
-          Cancel
-        </button>
+        
       </div>
     </div>
   </div>
