@@ -92,7 +92,7 @@
     <div class="actions">
       <div class="search-area" [class.hide]="!editPlan">
         <input type="text" class="search-input" placeholder="Enter revised research steps" [(ngModel)]="newPlan" />
-        <saf-icon (click)="handleAddToPlan($event)" class="search-icon" icon-name="arrow-up" size="16px" appearance="light"></saf-icon>
+        <saf-icon (click)="handleAddToPlan($event)" class="search-icon" [class.active]="newPlan.length > 2" icon-name="arrow-up" size="16px" appearance="light"></saf-icon>
       </div>
       <div class="actions-left">
         <button class="secondary" (click)="handleEditPlan()">
