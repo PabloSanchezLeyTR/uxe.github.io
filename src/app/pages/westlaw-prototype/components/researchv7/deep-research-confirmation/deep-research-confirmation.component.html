@@ -54,6 +54,10 @@
           {{ newPlan}}
         </div>
       </div>
+      <div *ngIf="addNewPlanTemp && !addNewPlan">
+          <app-cycling-circles></app-cycling-circles>
+          <span>Performing research, this may take a few minutes...</span>
+      </div>
       <div class="chat-bubble ai-side prompt-response-confirmation" *ngIf="addNewPlan">
         <div class="meta-data">
           <div class="logo">
