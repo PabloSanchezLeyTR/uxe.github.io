@@ -274,6 +274,10 @@ export class SearchBarComponentv2 {
           this.router.navigate([
             '/westlaw-prototype/deep-research-v6/research-confirmation',
           ]);
+        }else if(window.location.pathname.includes('new-research-v7')) {
+          this.router.navigate([
+            '/westlaw-prototype/deep-research-v7/research-confirmation',
+          ]);
         }else{
           this.router.navigate([
             '/westlaw-prototype/deep-research/research-confirmation',

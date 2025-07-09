@@ -266,6 +266,10 @@ export class SearchBarComponentv6 {
           this.router.navigate([
             '/westlaw-prototype-v2/deep-research-v6/research-results',
           ]);
+        }else if(window.location.pathname.includes('new-landing-v7')) {
+          this.router.navigate([
+            '/westlaw-prototype/deep-research-v7/research-confirmation',
+          ]);
         }else{
           this.router.navigate([
             '/westlaw-prototype/deep-research/research-confirmation',

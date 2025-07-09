@@ -112,6 +112,21 @@ import { SourcesComponentv6 } from './pages/westlaw-prototype/components/researc
 import { NotesComponentv6 } from './pages/westlaw-prototype/components/researchv6/deep-research-result/notes/notes.component'; // Verify this path exists or correct it
 import { QuickCheckComponentv6 } from './pages/westlaw-prototype/components/researchv6/quick-check/quick-check.component';
 import { NewResearchComponentv6 } from './pages/westlaw-prototype/components/researchv6/new-research/new-research.component';
+
+import { CustomToggleComponentv7 } from './pages/westlaw-prototype/components/researchv7/custom-toggle/customtoggle.component';
+import { NewLandingComponentv7 } from './pages/westlaw-prototype/components/researchv7/new-landing/landing.component';
+import { PlanTasksComponentv7 } from './pages/westlaw-prototype/components/researchv7/deep-research-result/plan-tasks/plan-tasks.component';
+import { KeywordSearchResultsComponentv7 } from './pages/westlaw-prototype/components/researchv7/keyword-search-results/keyword-search-results.component';
+import { DeepResearchConfirmationComponentv7 } from './pages/westlaw-prototype/components/researchv7/deep-research-confirmation/deep-research-confirmation.component';
+import { DeepResearchResultComponentv7 } from './pages/westlaw-prototype/components/researchv7/deep-research-result/deep-research-result.component';
+import { CaseDetailsComponentv7 } from './pages/westlaw-prototype/components/researchv7/case-details/case-details.component';
+import { LoadingStateBarsComponentv7 } from './pages/westlaw-prototype/components/researchv7/deep-research-result/loading-state-bars/loading-state-bars.component';
+import { ClarifyingQuestionsComponentv7 } from './pages/westlaw-prototype/components/researchv7/deep-research-result/clarifiying-questions/clarifiying-questions.component';
+import { SourcesComponentv7 } from './pages/westlaw-prototype/components/researchv7/deep-research-result/sources/sources.component';
+import { NotesComponentv7 } from './pages/westlaw-prototype/components/researchv7/deep-research-result/notes/notes.component'; // Verify this path exists or correct it
+import { QuickCheckComponentv7 } from './pages/westlaw-prototype/components/researchv7/quick-check/quick-check.component';
+import { NewResearchComponentv7 } from './pages/westlaw-prototype/components/researchv7/new-research/new-research.component';
+
 import { HomeComponentv2 } from './pages/westlaw-prototype/components/homev2/home.component';
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
@@ -134,6 +149,7 @@ import { HomeComponentv2 } from './pages/westlaw-prototype/components/homev2/hom
     NewResearchComponentv4,
     NewResearchComponentv5,
     NewResearchComponentv6,
+    NewResearchComponentv7,
     SearchBarComponent,
     ToggleComponent,
     SearchBarComponentv2,
@@ -211,6 +227,18 @@ import { HomeComponentv2 } from './pages/westlaw-prototype/components/homev2/hom
     SourcesComponentv6,
     NotesComponentv6,
     QuickCheckComponentv6,
+    CustomToggleComponentv7,
+    NewLandingComponentv7,
+    PlanTasksComponentv7,
+    KeywordSearchResultsComponentv7,
+    DeepResearchConfirmationComponentv7,
+    DeepResearchResultComponentv7,
+    CaseDetailsComponentv7,
+    LoadingStateBarsComponentv7,
+    ClarifyingQuestionsComponentv7,
+    SourcesComponentv7,
+    NotesComponentv7,
+    QuickCheckComponentv7,
   ],
   imports: [
     BrowserModule,

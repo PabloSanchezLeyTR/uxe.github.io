@@ -27,7 +27,7 @@ export class HomeComponent {
         this.showSearchBarFooter = urls.includes('research-confirmation') || urls.includes('keyword-search');
 
         this.showSearchBarFooter = urls.includes('keyword-search');
-        this.showBanner = !(urls.includes('deep-research') || urls.includes('deep-research-v2') || urls.includes('deep-research-v3') || urls.includes('deep-research-v4') || urls.includes('deep-research-v5') || urls.includes('deep-research-v6') || urls.includes('keyword-search') || urls.includes('case-details'));
+        this.showBanner = !(urls.includes('deep-research') || urls.includes('deep-research-v2') || urls.includes('deep-research-v3') || urls.includes('deep-research-v4') || urls.includes('deep-research-v5') || urls.includes('deep-research-v6') || urls.includes('deep-research-v7') || urls.includes('keyword-search') || urls.includes('case-details'));
         this.hideFooter = urls.includes('case-details')  || urls.includes('research-results');
       });
 
