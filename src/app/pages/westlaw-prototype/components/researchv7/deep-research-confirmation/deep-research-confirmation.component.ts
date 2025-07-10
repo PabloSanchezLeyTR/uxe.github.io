@@ -17,6 +17,7 @@ export class DeepResearchConfirmationComponentv7 {
     this.scrollToBottom();
   }
 
+  editPlanInProgress: boolean = false;
   editPlan: boolean = false;
   newPlan: string = '';
   addNewPlanTemp: boolean = false;
@@ -50,24 +51,39 @@ export class DeepResearchConfirmationComponentv7 {
 
   handleEditPlan() {
     this.editPlan = !this.editPlan;
+    this.editPlanInProgress = true;
     this.scrollToBottom();
   }
 
   handleAddToPlan(event:any){
-    console.log(event);
-    console.log(this.newPlan);
     this.plan.push(this.newPlan);
     //this.newPlan = '';
     this.editPlan = false;
     this.addNewPlanTemp = true;
 
     setTimeout(() => {
+      this.editPlanInProgress = false;
       //this.addNewPlanTemp = false;
       this.addNewPlan = true;
       this.scrollToBottom();
     }, 3000);
 
   }
+
+  handleDiscardEditPlan(){
+    this.editPlanInProgress = false;
+    this.editPlan = false;
+    this.newPlan = '';
+    this.addNewPlanTemp = false;
+    this.addNewPlan = false;
+    this.scrollToBottom();
+  }
+
+  handleAddSuggestion(suggestion: string) {
+    this.newPlan = suggestion;
+    this.scrollToBottom();
+  }
+
   scrollToBottom(): void {
     try {
       this.scrollContainer.nativeElement.scrollTop = this.scrollContainer.nativeElement.scrollHeight;

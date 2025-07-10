@@ -1,6 +1,6 @@
-<div class="centered-page">
+<div  #scrollContainer class="centered-page">
   <div class="main-content chat-ui">
-    <div #scrollContainer class="card">
+    <div  class="card">
       <div class="chat-bubble client-side prompt-submitted">
         <div class="meta-data">
           <div class="logo">
@@ -54,11 +54,11 @@
           {{ newPlan}}
         </div>
       </div>
-      <div *ngIf="addNewPlanTemp && !addNewPlan">
+      <!-- <div *ngIf="addNewPlanTemp && !addNewPlan">
           <app-cycling-circles></app-cycling-circles>
           <span>Performing research, this may take a few minutes...</span>
-      </div>
-      <div class="chat-bubble ai-side prompt-response-confirmation" *ngIf="addNewPlan">
+      </div> -->
+      <div class="chat-bubble ai-side prompt-response-confirmation" *ngIf="addNewPlanTemp">
         <div class="meta-data">
           <div class="logo">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -74,7 +74,11 @@
           </div>
           <span class="text">Westlaw - Deep Research</span>
         </div>
-        <div class="">
+        <div class="circle-progress" *ngIf="addNewPlanTemp && !addNewPlan">
+          <app-cycling-circles></app-cycling-circles>
+          <span>Updating research plan, this may take a few minutes...</span>
+        </div>
+        <div class="" *ngIf="addNewPlan">
             <div class="step-right">
               <div class="step-header">
                 <div class="step-title highlighted-step">Here are your revised research steps:</div>
@@ -85,28 +89,45 @@
                   <li *ngFor="let step of plan">{{ step }}</li>
                 </ol>
               </div>
+              <div class="step-footer">
+                <div class="">Feel free to make any additional edits as needed, or select Start research to begin.</div>
+              </div>
             </div>
         </div>
       </div>
     </div>
     <div class="actions">
       <div class="search-area" [class.hide]="!editPlan">
-        <input type="text" class="search-input" placeholder="Enter revised research steps" [(ngModel)]="newPlan" />
-        <saf-icon (click)="handleAddToPlan($event)" class="search-icon" [class.active]="newPlan.length > 2" icon-name="arrow-up" size="16px" appearance="light"></saf-icon>
+        <div class="search-area-header">
+          <span class="search-area-header-title">Edit plan</span>
+          <span (click)="handleDiscardEditPlan()" class="search-area-header-discard">Discard</span>
+        </div>
+        <div class="search-area-content">
+          <!-- <span class="search-label">Add to your plan</span> -->
+          <saf-icon class="search-icon" [class.active]="newPlan.length > 2" icon-name="search" size="16px" appearance="light"></saf-icon>
+          <input type="text" class="search-input" placeholder="Enter revised research steps" [(ngModel)]="newPlan" />
+          <saf-icon (click)="handleAddToPlan($event)" class="search-icon" [class.active]="newPlan.length > 2" icon-name="arrow-up" size="16px" appearance="light"></saf-icon>
+        </div>
+        <div class="search-area-footer">
+          <button (click)="handleAddSuggestion('Add one more step to analyze ')">Add one more step to analyze..</button>
+          <button (click)="handleAddSuggestion('Analyze reasoning ')">Analyze reasoning...</button>
+          <button (click)="handleAddSuggestion('Research by ')">Research by...</button>
+        </div>
       </div>
-      <div class="actions-left">
-        <button class="secondary" (click)="handleEditPlan()">
-          Edit Plan
-        </button>
-      </div>
-      <div class="actions-right">
-        <button routerLink="/westlaw-prototype/" class="tertiary">
-          Cancel
-        </button>
-        <button routerLink="/westlaw-prototype/deep-research-v5/research-results" class="primary start-research">
-          Start research
-        </button>
-        
+      <div class="actions-area" [class.hide]="editPlanInProgress">
+        <div class="actions-left">
+          <button class="secondary" (click)="handleEditPlan()">
+            Edit Plan
+          </button>
+        </div>
+        <div class="actions-right">
+          <button routerLink="/westlaw-prototype/" class="tertiary">
+            Cancel
+          </button>
+          <button routerLink="/westlaw-prototype/deep-research-v7/research-results" class="primary start-research">
+            Start research
+          </button>
+        </div>
       </div>
     </div>
   </div>
