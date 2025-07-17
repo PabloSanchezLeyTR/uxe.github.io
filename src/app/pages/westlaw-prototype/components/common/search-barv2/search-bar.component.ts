@@ -370,7 +370,7 @@ export class SearchBarComponentv2 {
   }
 
   handleSearchSend(){
-    if(window.location.pathname.includes('deep-research-v7/research-results')) {
+    if(window.location.pathname.includes('deep-research-v7/research-results') || window.location.pathname.includes('deep-research-v8/research-results')) {
       this.searchOutput.emit(this.inputContent);
       const editor = this.searchInput?.nativeElement;
       if(editor){

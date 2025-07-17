@@ -51,7 +51,9 @@ import { DeepResearchResultComponentv6 } from './pages/westlaw-prototype/compone
 import { QuickCheckComponentv6 } from './pages/westlaw-prototype/components/researchv6/quick-check/quick-check.component';
 import { KeywordSearchResultsComponentv6 } from './pages/westlaw-prototype/components/researchv6/keyword-search-results/keyword-search-results.component';
 import { CaseDetailsComponentv6 } from './pages/westlaw-prototype/components/researchv6/case-details/case-details.component';
+
 import { HomeComponentv2 } from './pages/westlaw-prototype/components/homev2/home.component';
+
 import { CaseDetailsComponentv7 } from './pages/westlaw-prototype/components/researchv7/case-details/case-details.component';
 import { KeywordSearchResultsComponentv7 } from './pages/westlaw-prototype/components/researchv7/keyword-search-results/keyword-search-results.component';
 import { NewResearchComponentv7 } from './pages/westlaw-prototype/components/researchv7/new-research/new-research.component';
@@ -59,6 +61,15 @@ import { NewLandingComponentv7 } from './pages/westlaw-prototype/components/rese
 import { DeepResearchConfirmationComponentv7 } from './pages/westlaw-prototype/components/researchv7/deep-research-confirmation/deep-research-confirmation.component';
 import { DeepResearchResultComponentv7 } from './pages/westlaw-prototype/components/researchv7/deep-research-result/deep-research-result.component';
 import { QuickCheckComponentv7 } from './pages/westlaw-prototype/components/researchv7/quick-check/quick-check.component';
+
+import { NewLandingComponentv8 } from './pages/westlaw-prototype/components/researchv8/new-landing/landing.component';
+import { CaseDetailsComponentv8 } from './pages/westlaw-prototype/components/researchv8/case-details/case-details.component';
+import { KeywordSearchResultsComponentv8 } from './pages/westlaw-prototype/components/researchv8/keyword-search-results/keyword-search-results.component';
+import { NewResearchComponentv8 } from './pages/westlaw-prototype/components/researchv8/new-research/new-research.component';
+import { DeepResearchConfirmationComponentv8 } from './pages/westlaw-prototype/components/researchv8/deep-research-confirmation/deep-research-confirmation.component';
+import { DeepResearchResultComponentv8 } from './pages/westlaw-prototype/components/researchv8/deep-research-result/deep-research-result.component';
+import { QuickCheckComponentv8 } from './pages/westlaw-prototype/components/researchv8/quick-check/quick-check.component';
+
 
 const routes: Routes = [
   // Login route (accessible without authentication)
@@ -69,6 +80,7 @@ const routes: Routes = [
   { path: 'new-landing', canActivate: [AuthGuard], component: NewLandingComponent },
   { path: 'new-landing-v6', canActivate: [AuthGuard], component: NewLandingComponentv6 },
   { path: 'new-landing-v7', canActivate: [AuthGuard], component: NewLandingComponentv7 },
+  { path: 'new-landing-v8', canActivate: [AuthGuard], component: NewLandingComponentv8 },
   { path: 'app-jaime-research', canActivate: [AuthGuard], component: WijmoDemoComponent },
   { path: 'research-history', canActivate: [AuthGuard], component: ResearchHistoryComponent },
   { path: 'my-research', canActivate: [AuthGuard], component: MyResearchComponent },
@@ -262,6 +274,37 @@ const routes: Routes = [
       ]
     },
     {
+      path: 'new-research-v8',
+      canActivate: [AuthGuard],
+      component: NewResearchComponentv8,
+    },
+    {
+      path: 'new-landing-v8',
+      canActivate: [AuthGuard],
+      component: NewLandingComponentv8,
+    },
+    {
+      path: 'deep-research-v8',
+      canActivate: [AuthGuard],
+      children: [
+        {
+          path: 'research-confirmation',
+          canActivate: [AuthGuard],
+          component: DeepResearchConfirmationComponentv8
+        },
+        {
+          path: 'research-results',
+          canActivate: [AuthGuard],
+          component: DeepResearchResultComponentv8
+        },
+        {
+          path: 'quick-check',
+          canActivate: [AuthGuard],
+          component: QuickCheckComponentv8
+        },
+      ]
+    },
+    {
       path: 'deep-research',
       canActivate: [AuthGuard],
       children: [
@@ -341,6 +384,16 @@ const routes: Routes = [
       path: 'case-detailsv7',
       canActivate: [AuthGuard],
       component: CaseDetailsComponentv7
+    },
+    {
+      path: 'keyword-searchv8',
+      canActivate: [AuthGuard],
+      component: KeywordSearchResultsComponentv8
+    },
+    {
+      path: 'case-detailsv8',
+      canActivate: [AuthGuard],
+      component: CaseDetailsComponentv8
     },
   ]},
 

@@ -129,6 +129,20 @@ import { NewResearchComponentv7 } from './pages/westlaw-prototype/components/res
 
 import { HomeComponentv2 } from './pages/westlaw-prototype/components/homev2/home.component';
 import { CountdownProgressComponent } from './pages/westlaw-prototype/components/researchv7/custom-countdown/countdown-progress.component';
+import { CustomToggleComponentv8 } from './pages/westlaw-prototype/components/researchv8/custom-toggle/customtoggle.component';
+import { NewLandingComponentv8 } from './pages/westlaw-prototype/components/researchv8/new-landing/landing.component';
+import { PlanTasksComponentv8 } from './pages/westlaw-prototype/components/researchv8/deep-research-result/plan-tasks/plan-tasks.component';
+import { KeywordSearchResultsComponentv8 } from './pages/westlaw-prototype/components/researchv8/keyword-search-results/keyword-search-results.component';
+import { DeepResearchConfirmationComponentv8 } from './pages/westlaw-prototype/components/researchv8/deep-research-confirmation/deep-research-confirmation.component';
+import { DeepResearchResultComponentv8 } from './pages/westlaw-prototype/components/researchv8/deep-research-result/deep-research-result.component';
+import { CaseDetailsComponentv8 } from './pages/westlaw-prototype/components/researchv8/case-details/case-details.component';
+import { LoadingStateBarsComponentv8 } from './pages/westlaw-prototype/components/researchv8/deep-research-result/loading-state-bars/loading-state-bars.component';
+import { ClarifyingQuestionsComponentv8 } from './pages/westlaw-prototype/components/researchv8/deep-research-result/clarifiying-questions/clarifiying-questions.component';
+import { SourcesComponentv8 } from './pages/westlaw-prototype/components/researchv8/deep-research-result/sources/sources.component';
+import { NotesComponentv8 } from './pages/westlaw-prototype/components/researchv8/deep-research-result/notes/notes.component';
+import { QuickCheckComponentv8 } from './pages/westlaw-prototype/components/researchv8/quick-check/quick-check.component';
+import { CountdownProgressComponentv8 } from './pages/westlaw-prototype/components/researchv8/custom-countdown/countdown-progress.component';
+import { NewResearchComponentv8 } from './pages/westlaw-prototype/components/researchv8/new-research/new-research.component';
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   declarations: [
@@ -151,6 +165,7 @@ import { CountdownProgressComponent } from './pages/westlaw-prototype/components
     NewResearchComponentv5,
     NewResearchComponentv6,
     NewResearchComponentv7,
+    NewResearchComponentv8,
     SearchBarComponent,
     ToggleComponent,
     SearchBarComponentv2,
@@ -240,7 +255,20 @@ import { CountdownProgressComponent } from './pages/westlaw-prototype/components
     SourcesComponentv7,
     NotesComponentv7,
     QuickCheckComponentv7,
-    CountdownProgressComponent
+    CustomToggleComponentv8,
+    NewLandingComponentv8,
+    PlanTasksComponentv8,
+    KeywordSearchResultsComponentv8,
+    DeepResearchConfirmationComponentv8,
+    DeepResearchResultComponentv8,
+    CaseDetailsComponentv8,
+    LoadingStateBarsComponentv8,
+    ClarifyingQuestionsComponentv8,
+    SourcesComponentv8,
+    NotesComponentv8,
+    QuickCheckComponentv8,
+    CountdownProgressComponent,
+    CountdownProgressComponentv8
   ],
   imports: [
     BrowserModule,

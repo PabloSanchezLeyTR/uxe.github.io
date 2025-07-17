@@ -1,9 +1,9 @@
-<div class="top-centered-page" [class.landing]="this.href === '/new-landing-v6' || this.href === '/new-landing-v7' || this.href === '/new-landing-v8'">
-    <div class="set-as-new-page" [class.landing]="this.href === '/new-landing-v6' || this.href === '/new-landing-v7' || this.href === '/new-landing-v8'">
+<div class="top-centered-page" [class.landing]="this.href === '/new-landing-v7'">
+    <div class="set-as-new-page" [class.landing]="this.href === '/new-landing-v7'">
         <span>Set as start page</span><app-custom-toggle></app-custom-toggle>
         
     </div>
-    <div class="main-content" [class.landing]="this.href === '/new-landing-v6' || this.href === '/new-landing-v7' || this.href === '/new-landing-v8'">
+    <div class="main-content" [class.landing]="this.href === '/new-landing-v7'">
         <div class="header" *ngIf="searchType != 'Search'">
             <div class="title">
                 Welcome to Westlaw <span class="orange">Deep AI Research</span>
@@ -21,10 +21,10 @@
             </div>
         </div>
         <div class="content">
-            <app-search-bar-v6 (searchTypeChange)="searchTypeChanged($event)"></app-search-bar-v6>
+            <app-search-bar-v2 (searchTypeChange)="searchTypeChanged($event)"></app-search-bar-v2>
         </div>
     </div>
-    <div class="content" [class.landing]="this.href === '/new-landing-v6' || this.href === '/new-landing-v7' || this.href === '/new-landing-v8'">
+    <div class="content" [class.landing]="this.href === '/new-landing-v7'">
         <app-bookmarks></app-bookmarks>
     </div>
 </div>
