@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -6,10 +7,9 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './deep-research-confirmation.component.html',
   styleUrls: ['./deep-research-confirmation.component.less'],
 })
+
 export class DeepResearchConfirmationComponentv7 {
-  form = new FormGroup({
-    longerTime: new FormControl<string | null>('ten'),
-  });
+  constructor(private router: Router) {}
 
   @ViewChild('scrollContainer')
   private scrollContainer!: ElementRef;
@@ -17,6 +17,8 @@ export class DeepResearchConfirmationComponentv7 {
     this.scrollToBottom();
   }
 
+  progress1: boolean = true;
+  progress2: boolean = false;
   editPlanInProgress: boolean = false;
   editPlan: boolean = false;
   newPlan: string = '';
@@ -41,15 +43,16 @@ export class DeepResearchConfirmationComponentv7 {
                   'Identify the current legal standard for evaluating these claims in New York. ',
   ];
 
-  get longerTime() {
-    return this.form.controls.longerTime.value;
-  }
+  // get longerTime() {
+  //   return this.form.controls.longerTime.value;
+  // }
 
-  onTimeChange(deepness: string | null) {
-    this.form.controls.longerTime.setValue(deepness);
-  }
+  // onTimeChange(deepness: string | null) {
+  //   this.form.controls.longerTime.setValue(deepness);
+  // }
 
   handleEditPlan() {
+    this.progress1 = false;
     this.editPlan = !this.editPlan;
     this.editPlanInProgress = true;
     this.scrollToBottom();
@@ -65,6 +68,7 @@ export class DeepResearchConfirmationComponentv7 {
       this.editPlanInProgress = false;
       //this.addNewPlanTemp = false;
       this.addNewPlan = true;
+      this.progress2 = true;
       this.scrollToBottom();
     }, 3000);
 
@@ -88,5 +92,15 @@ export class DeepResearchConfirmationComponentv7 {
     try {
       this.scrollContainer.nativeElement.scrollTop = this.scrollContainer.nativeElement.scrollHeight;
     } catch(err) { }
+  }
+
+  handleCountdownFinishedProgress1() {
+    this.progress1 = false;
+    this.router.navigate(['/westlaw-prototype/deep-research-v7/research-results']);
+  }
+
+  handleCountdownFinishedProgress2() {
+    this.progress2 = false;
+    this.router.navigate(['/westlaw-prototype/deep-research-v7/research-results']);
   }
 }

@@ -43,6 +43,8 @@ export class SearchBarComponentv2 {
 
   @Output() searchTypeChange = new EventEmitter<string>();
 
+  @Output() searchOutput = new EventEmitter<string>();
+
   @Input() compactMode: boolean = false;
 
   boundCloseDialog: () => void;
@@ -131,6 +133,8 @@ export class SearchBarComponentv2 {
   showResponseTimeMenu: boolean = false;
   showDeepResearchMenu: boolean = false;
 
+  @Output() inputChange: any = new EventEmitter<string>();
+
   inputChanged(event: Event) {
     const input = event.target as HTMLDivElement;
     this.inputContent = input.innerText;
@@ -144,6 +148,7 @@ export class SearchBarComponentv2 {
     } else {
       this.showSearchSuggestions = false;
     }
+    this.inputChange.emit(this.inputContent);
   }
 
   toggleOptionSelected(option: ToggleOption) {
@@ -252,6 +257,7 @@ export class SearchBarComponentv2 {
   }
 
   redirectToResearch() {
+    console.log('redirect');
     if (this.inputContent && this.inputContent.length > 0) {
       if (this.selectedOption?.label === 'Deep AI Research') {
         if(window.location.pathname.includes('new-research-v2')) {
@@ -285,7 +291,7 @@ export class SearchBarComponentv2 {
         }
       } else if (this.selectedOption?.label === 'Search') {
         this.router.navigate(['/westlaw-prototype/keyword-search']);
-      }
+      } 
     }
   }
 
@@ -361,5 +367,15 @@ export class SearchBarComponentv2 {
     this.deepSearch = deepSearch;
     console.log(this.deepSearch);
     this.toggleOptions[1].deepSearch = deepSearch;
+  }
+
+  handleSearchSend(){
+    if(window.location.pathname.includes('deep-research-v7/research-results')) {
+      this.searchOutput.emit(this.inputContent);
+      const editor = this.searchInput?.nativeElement;
+      if(editor){
+        editor.innerText = '';
+      }
+    }
   }
 }

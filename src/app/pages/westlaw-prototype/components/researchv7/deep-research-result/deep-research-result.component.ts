@@ -12,7 +12,8 @@ export class DeepResearchResultComponentv7 {
   @ViewChild('progressBarIndicator') progressBarIndicator!: ElementRef<HTMLDivElement>;
   @ViewChild('dialog', { static: false }) fullPlanDialog: any;
   @ViewChild('planTasks') planTasksComponent!: PlanTasksComponentv7;
-  @ViewChild('popover') popoverRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('popover') popoverRef!: ElementRef<HTMLDivElement>;@ViewChild('scrollContainer')
+  private scrollContainer!: ElementRef;
   constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   scrollToTop() {
@@ -88,12 +89,23 @@ export class DeepResearchResultComponentv7 {
   nSources: number = 0;
   nNotes: number = 0;
   hasViewedSource: boolean = true;
+  toggleSupplementalQuestions: boolean = false;
+  supInputValue:string = '';
+  showSupProgress:boolean = false;
+  showSupResponse:boolean = false;
+  showV2Report:boolean = false;
 
   expandedFooter: boolean = false;
   togglePlan: boolean = false;
+  toggleReport: boolean = true;
+  togglePlan2: boolean = false;
+  toggleReport2: boolean = true;
   selectedTabIndex: number = 0;
+  reportVersion: string = 'v1';
 
   sources = sourcesData;
+
+  side: string = '';
 
   // --- State Properties ---
   data: {title: string, details: string, summary?:string, snippet?:string, url?:string, snippetUrl?:string} | null = null;
@@ -270,6 +282,8 @@ export class DeepResearchResultComponentv7 {
       this.nNotes = 4;
       this.researchReportTabLoading = false;
       this.preliminaryAnswer = false;
+      this.togglePlan = false;
+      this.scrollToBottom(); // Scroll to the bottom of the container
     }
 
 
@@ -438,4 +452,110 @@ export class DeepResearchResultComponentv7 {
     return true;
   }
   
+  handleToggleSide(clicked:string) {
+    if(this.side === clicked){
+      this.side = '';
+    }else{
+      this.side = clicked;
+    }
+  }
+
+
+  handleToggleReport(){
+    this.toggleReport = !this.toggleReport;
+  }
+  handleToggleSteps(){
+    this.togglePlan = !this.togglePlan;
+  }
+  handleToggleReport2(){
+    this.toggleReport2 = !this.toggleReport2;
+  }
+  handleToggleSteps2(){
+    this.togglePlan2 = !this.togglePlan2;
+  }
+  handleToggleSup(){
+    this.toggleSupplementalQuestions = !this.toggleSupplementalQuestions;
+  }
+
+  numberOfFollowUps: number = 0;
+
+  handleInputChange(event: any) {
+    console.log(event);
+    this.numberOfFollowUps++;
+    console.log('Number of follow-ups:', this.numberOfFollowUps);
+    this.followupResponse();
+  }
+
+  followUp1userPost:boolean = false;
+  followup1progress:boolean = false;
+  followup1response:boolean = false;
+
+  followUp2userPost:boolean = false;
+  followup2progress:boolean = false;
+  followup2response:boolean = false;
+
+  followUp3userPost:boolean = false;
+  followup3progress:boolean = false;
+  followup3response:boolean = false;
+
+  followupResponse(){
+    if(this.numberOfFollowUps === 1){
+      this.followUp1userPost = true;
+      this.followup1progress = true;
+      this.scrollToBottom();
+
+      setTimeout(() => {
+        this.followup1progress = false;
+        this.followup1response = true;
+        this.scrollToBottom(); // Scroll to the bottom of the container
+      }, 3000);
+    }else if(this.numberOfFollowUps === 2){
+      this.followUp2userPost = true;
+      this.followup2progress = true;
+      this.scrollToBottom();
+
+      setTimeout(() => {
+        this.followup2progress = false;
+        this.followup2response = true;
+        this.scrollToBottom(); // Scroll to the bottom of the container
+      }, 3000);
+    }else if(this.numberOfFollowUps === 3){
+      this.followUp3userPost = true;
+      this.followup3progress = true;
+      this.scrollToBottom();
+
+      setTimeout(() => {
+        this.followup3progress = false;
+        this.followup3response = true;
+        this.scrollToBottom(); // Scroll to the bottom of the container
+      }, 3000);
+    }
+
+  }
+
+  handleSupInput(event: any) {
+    this.supInputValue = event.target.value;
+  }
+
+  handleSubmitSupQuestions(){ 
+    console.log('Submitted Supplemental Questions:', this.supInputValue);
+    //this.supInputValue = ''; // Clear the input after submission
+    this.toggleSupplementalQuestions = false; // Close the input area
+    this.showSupProgress = true;
+    this.showSupResponse = true;
+    this.scrollToBottom(); // Scroll to the bottom of the container
+
+    setTimeout(() => {
+      this.showSupProgress = false;
+      this.showV2Report = true;
+      this.reportVersion = 'v2';
+      this.scrollToBottom(); // Scroll to the bottom of the container
+    }, 3000);
+  }
+
+  scrollToBottom(): void {
+    setTimeout(() => {
+      this.scrollContainer.nativeElement.scrollTop = this.scrollContainer.nativeElement.scrollHeight;
+    }, 500);
+  }
 }

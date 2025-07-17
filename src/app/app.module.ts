@@ -128,6 +128,7 @@ import { QuickCheckComponentv7 } from './pages/westlaw-prototype/components/rese
 import { NewResearchComponentv7 } from './pages/westlaw-prototype/components/researchv7/new-research/new-research.component';
 
 import { HomeComponentv2 } from './pages/westlaw-prototype/components/homev2/home.component';
+import { CountdownProgressComponent } from './pages/westlaw-prototype/components/researchv7/custom-countdown/countdown-progress.component';
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   declarations: [
@@ -239,6 +240,7 @@ import { HomeComponentv2 } from './pages/westlaw-prototype/components/homev2/hom
     SourcesComponentv7,
     NotesComponentv7,
     QuickCheckComponentv7,
+    CountdownProgressComponent
   ],
   imports: [
     BrowserModule,
